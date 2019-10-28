@@ -1,6 +1,7 @@
 <script>
 	let name='Max';
 	let age=30;function incrementAge () { age += 1;}
+
 </script>
 
 <style>
@@ -9,5 +10,5 @@
 	}
 </style>
 
-<h1>Hello {name}, my age is {age}!</h1>
+<h1>Hello {name.toUpperCase()}, my age is {age+1}!</h1>
 <button on:click="{incrementAge}">Change Age</button>
