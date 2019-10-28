@@ -1,6 +1,6 @@
 <script>
-	export let name;
-	export let age;
+	let name='Max';
+	let age=30;
 </script>
 
 <style>
