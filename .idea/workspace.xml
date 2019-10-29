@@ -4,6 +4,7 @@
     <list default="true" id="2064fe40-8edb-475f-8996-35788078fef7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Meetups/MeetupItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Meetups/MeetupItem.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/svelte.txt" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,6 +26,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dea1a328cffc7322da44bafbc7df1c6c039874da" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SsuQV6IBzDNahPtqF5nuVD6ljg" />
