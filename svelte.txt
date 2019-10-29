@@ -80,7 +80,6 @@ base-syntax-03-new-component.zip
 Реактивность - Не тольк переменные но и др: ф-ция
 	$: console.log(name);
 
-
 base-syntax-04-nested-components.zip
 ---- base-syntax-05-binding-to-element-properties.mp4
 input 1-направленное изменение
@@ -116,90 +115,95 @@ Section 03 - Working with Conditional & Loops
 assignment-solution.zip
 assignment-start.zip
 cond-loops-01-if.zip
-cond-loops-01-intro.mp4
+---- cond-loops-01-intro.mp4
+Начальная КонтактКарта бехз кнопок и условия, пока 
+0-03 {#} - многострочная (блочная) команда, без пробела за ней сама команда
+0-04 {#if done }  ---обычная JS if-команда
+  <ContactCard  userName={name} jobTitle={title} {description} userImage={image} />
+     {/if}  ---конец if
 cond-loops-02-each.zip
-cond-loops-02-if-statements-in-html.mp4
-cond-loops-03-if-else-else-if.mp4
+---- cond-loops-02-if-statements-in-html.mp4
+---- cond-loops-03-if-else-else-if.mp4
 cond-loops-03-with-keys.zip
 cond-loops-04-more-on-keys.zip
-cond-loops-04-outputting-lists-with-each.mp4
-cond-loops-05-each-else-and-extracting-the-index.mp4
-cond-loops-06-lists-and-keys.mp4
-cond-loops-09-a-closer-look-at-list-keys.mp4
-cond-loops-10-wrap-up.mp4
+---- cond-loops-04-outputting-lists-with-each.mp4
+---- cond-loops-05-each-else-and-extracting-the-index.mp4
+---- cond-loops-06-lists-and-keys.mp4
+---- cond-loops-09-a-closer-look-at-list-keys.mp4
+---- cond-loops-10-wrap-up.mp4
 project-setup.zip
 ----------------------------------------
 Section 04 - A Closer Look at Reactivity
 ----------------------------------------
 Introduction to events - Learn web development _ MDN.webarchive
 more-on-reactivity-01-finished.zip
-more-reactivity-01-intro.mp4
-more-reactivity-02-updating-arrays-and-objects-immutably.mp4
-more-reactivity-03-event-modifiers.mp4
-more-reactivity-04-using-inline-functions.mp4
-more-reactivity-05-wrap-up.mp4
+---- more-reactivity-01-intro.mp4
+---- more-reactivity-02-updating-arrays-and-objects-immutably.mp4
+---- more-reactivity-03-event-modifiers.mp4
+---- more-reactivity-04-using-inline-functions.mp4
+---- more-reactivity-05-wrap-up.mp4
 Reference vs Primitive Values.webarchive
 ----------------------------------------
 Section 05 - Course Project - First Steps
 ----------------------------------------
 prj-basics-01-added-header.zip
-prj-basics-01-intro.mp4
+---- prj-basics-01-intro.mp4
 prj-basics-02-meetup-items-with-styles.zip
-prj-basics-02-setup-and-first-component.mp4
+---- prj-basics-02-setup-and-first-component.mp4
 prj-basics-03-meetup-grid.zip
-prj-basics-03-mounting-components.mp4
+---- prj-basics-03-mounting-components.mp4
 prj-basics-04-added-textinput.zip
-prj-basics-04-adding-some-data.mp4
-prj-basics-05-adding-a-meetupitem-component.mp4
+---- prj-basics-04-adding-some-data.mp4
+---- prj-basics-05-adding-a-meetupitem-component.mp4
 prj-basics-05-finished.zip
-prj-basics-06-different-component-types.mp4
-prj-basics-07-passing-data-into-components.mp4
-prj-basics-08-adding-a-meetupgrid-component.mp4
-prj-basics-09-adding-meetups-via-a-form.mp4
-prj-basics-10-creating-a-textinput-component.mp4
-prj-basics-11-added-custom-button-component.mp4
-prj-basics-12-wrap-up.mp4
+---- prj-basics-06-different-component-types.mp4
+---- prj-basics-07-passing-data-into-components.mp4
+---- prj-basics-08-adding-a-meetupgrid-component.mp4
+---- prj-basics-09-adding-meetups-via-a-form.mp4
+---- prj-basics-10-creating-a-textinput-component.mp4
+---- prj-basics-11-added-custom-button-component.mp4
+---- prj-basics-12-wrap-up.mp4
 project-setup.zip
 ----------------------------------------
 Section 06 - Diving Deeper into Components
 ----------------------------------------
 cmp-01-events.zip
-cmp-01-intro.mp4
-cmp-02-component-types.mp4
+---- cmp-01-intro.mp4
+---- cmp-02-component-types.mp4
 cmp-02-spread-and-default-props.zip
-cmp-03-component-communication-overview.mp4
-cmp-04-event-forwarding.mp4
+---- cmp-03-component-communication-overview.mp4
+---- cmp-04-event-forwarding.mp4
 cmp-04-slot-props.zip
-cmp-05-custom-events.mp4
+---- cmp-05-custom-events.mp4
 cmp-05-lifecycle-hooks.zip
-cmp-06-extracting-event-data.mp4
-cmp-07-spread-props-and-default-props.mp4
-cmp-08-slots.mp4
-cmp-09-named-and-default-slots.mp4
-cmp-10-opening-and-closing-a-modal.mp4
-cmp-11-slot-props.mp4
-cmp-12-component-lifecycle-theory.mp4
-cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4
-cmp-14-using-tick.mp4
-cmp-15-wrap-up.mp4
+---- cmp-06-extracting-event-data.mp4
+---- cmp-07-spread-props-and-default-props.mp4
+---- cmp-08-slots.mp4
+---- cmp-09-named-and-default-slots.mp4
+---- cmp-10-opening-and-closing-a-modal.mp4
+---- cmp-11-slot-props.mp4
+---- cmp-12-component-lifecycle-theory.mp4
+---- cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4
+---- cmp-14-using-tick.mp4
+---- cmp-15-wrap-up.mp4
 ----------------------------------------
 Section 07 - Course Project - Components Deep Dive
 ----------------------------------------
 prj-cmp-01-events.zip
-prj-cmp-01-intro.mp4
+---- prj-cmp-01-intro.mp4
 prj-cmp-02-badge-with-slot.zip
-prj-cmp-02-default-props.mp4
-prj-cmp-03-custom-events.mp4
+---- prj-cmp-02-default-props.mp4
+---- prj-cmp-03-custom-events.mp4
 prj-cmp-03-form-in-component.zip
 prj-cmp-04-added-modal.zip
-prj-cmp-04-slots.mp4
-prj-cmp-05-creating-an-edit-meetup-component.mp4
+---- prj-cmp-04-slots.mp4
+---- prj-cmp-05-creating-an-edit-meetup-component.mp4
 prj-cmp-05-finished.zip
-prj-cmp-06-communicating-between-components.mp4
-prj-cmp-07-more-slots.mp4
-prj-cmp-08-adding-a-modal.mp4
-prj-cmp-09-finishing-the-modal-edit-process.mp4
-prj-cmp-10-wrap-up.mp4
+---- prj-cmp-06-communicating-between-components.mp4
+---- prj-cmp-07-more-slots.mp4
+---- prj-cmp-08-adding-a-modal.mp4
+---- prj-cmp-09-finishing-the-modal-edit-process.mp4
+---- prj-cmp-10-wrap-up.mp4
 ----------------------------------------
 Section 08 - Working with Bindings & Forms
 ----------------------------------------

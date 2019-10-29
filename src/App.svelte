@@ -5,19 +5,10 @@
   let title = "";
   let image = "";
   let description = "";
-  let formState = "empty";
+  let done = false;
  
 function addContact() {
-    if (
-      name.trim().length == 0 ||
-      title.trim().length == 0 ||
-      image.trim().length == 0 ||
-      description.trim().length == 0
-    ) {
-      formState = "invalid";
-      return;
-    }
-    formState = "done";
+    done = true;
   } 
 
 </script>
@@ -27,7 +18,7 @@ function addContact() {
     width: 30rem;
     max-width: 100%;
   }
-</style>
+</style>  
 
 <div id="form">
   <div class="form-control">
@@ -48,8 +39,8 @@ function addContact() {
   </div>
 </div>
 
-  <ContactCard
-    userName={name}
-    jobTitle={title}
-    {description}
-    userImage={image} />
+<button on:click={addContact}>Add Contact Card</button>
+
+{#if done }
+  <ContactCard  userName={name} jobTitle={title} {description} userImage={image} />
+{/if}
