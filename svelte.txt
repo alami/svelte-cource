@@ -217,8 +217,22 @@ prj-basics-04-added-textinput.zip
 3-08 теперь компонент для его визуализации
 
 ---- prj-basics-05-adding-a-meetupitem-component.mp4
+3-32  чтобы не накладывались сделаем секции и добавим стили
+
 prj-basics-05-finished.zip
 ---- prj-basics-06-different-component-types.mp4
+типы компонент: нет офиц диф-ции,
+ компоненты со сотоянием, контейнеры
+  - хранение и упрние дынными, распр-ние данных всюду, (серверы итп)
+  примеры - root, App-Product-Checkout
+  только неск-ко (в зависимости от размера) на приложение
+ компоненты презентации -  получение и вывод данных 
+  примеры - Modal, Card, Button
+  множество
+
+
+
+
 ---- prj-basics-07-passing-data-into-components.mp4
 ---- prj-basics-08-adding-a-meetupgrid-component.mp4
 ---- prj-basics-09-adding-meetups-via-a-form.mp4
