@@ -1,39 +1,55 @@
 <script>
 	import ContactCard from "./ContactCard.svelte"
-	let age=30;
-	let name='Max';
-	let title='';
-	let image='';
-	let description='';
-	$: uppercaseName = name.toUpperCase();
-	$: console.log(name);
-	$: if (name === 'Maximilian' ) {//|| name === 'MAXIMILIAN'
-		console.log('It is run!');
-		age = 31;
-	}
-	function incrementAge () { age += 1;}
-	function changeName () { name = 'Maximilian';}
-	function nameInput(event) {
-		const enteredValue = event.target.value;
-		name = enteredValue;
-	}
+
+  let name = "Max";
+  let title = "";
+  let image = "";
+  let description = "";
+  let formState = "empty";
+ 
+function addContact() {
+    if (
+      name.trim().length == 0 ||
+      title.trim().length == 0 ||
+      image.trim().length == 0 ||
+      description.trim().length == 0
+    ) {
+      formState = "invalid";
+      return;
+    }
+    formState = "done";
+  } 
+
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
+  #form {
+    width: 30rem;
+    max-width: 100%;
+  }
 </style>
 
-<h1>Hello {uppercaseName}, my age is {age}!</h1>
-<button on:click="{incrementAge}">Change Age</button>
-<!--<button on:click="{changeName}">Change Name</button>-->
-<!--<input type="text" value="{name}" on:input="{nameInput}">-->
-<input type="text" bind:value={name} />
-<input type="text" bind:value={title} />
-<input type="text" bind:value={image} />
-<textarea rows="3" bind:value={description} />
-<ContactCard userName={name}
-			 jobTitle={title}
-			 {image}
-			 {description} />
+<div id="form">
+  <div class="form-control">
+    <label for="userName">User Name</label>
+    <input type="text" bind:value={name} id="userName" />
+  </div>
+  <div class="form-control">
+    <label for="jobTitle">Job Title</label>
+    <input type="text" bind:value={title} id="jobTitle" />
+  </div>
+  <div class="form-control">
+    <label for="image">Image URL</label>
+    <input type="text" bind:value={image} id="image" />
+  </div>
+  <div class="form-control">
+    <label for="desc">Description</label>
+    <textarea rows="3" bind:value={description} id="desc" />
+  </div>
+</div>
+
+  <ContactCard
+    userName={name}
+    jobTitle={title}
+    {description}
+    userImage={image} />
