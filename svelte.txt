@@ -132,9 +132,36 @@ cond-loops-03-with-keys.zip
 cond-loops-04-more-on-keys.zip
 
 ---- cond-loops-04-outputting-lists-with-each.mp4
+     createdContacts  = push ( {name:name,...});
+0-06 Реактивность push не работает и вместо него исп-ть 
+0-07 createdContacts  = [...createdContacts, {name:name,...}];
+0-08 {#each createdContacts as contact}  ---блок
+<ContactCard userName = {contact.name} ...  
+    {/each}         ---выведет все множество КонтактКарт
+
 ---- cond-loops-05-each-else-and-extracting-the-index.mp4
+{#each   createdContacts as contact,  i} --начинается с 0-ля
+    <h2> {i+1} </h2> ---выведет индекс-^
+{:else} можно добавить внутрь блока - сработает, если массив будет пустой
 ---- cond-loops-06-lists-and-keys.mp4
+можно использовать обычные JS команды, для работы с массивами
+function deleteFirst() { createdContacts = createdContacts.slice(1);  }
+function deleteLast() { createdContacts = createdContacts.slice(0,-1);  }
+0-02 проблемы с удаление по порядковому индексу i
+0-08 создать и использовать уникальный ID  i (contact.id)
+    createdContacts  = [...createdContacts, {id: Math.random(), name:name,...}]
+    {#each createdContacts as contact, i (contact.id)}  
+
+---- cond-loops-07 ---?
+---- cond-loops-08 ---?
 ---- cond-loops-09-a-closer-look-at-list-keys.mp4
+тест Password.svelte - верификация и удаление паролей 
+0-03 чтобы дублировались вводим  уникальный ID  i (pw)
+  {#each passwords as pw, i (pw)}
+    <li on:click={removePassword.bind(this, i)}>{pw}</li>
+  {/each}
+ 
+
 ---- cond-loops-10-wrap-up.mp4
 project-setup.zip
 ----------------------------------------
