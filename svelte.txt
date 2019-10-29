@@ -151,6 +151,7 @@ function deleteLast() { createdContacts = createdContacts.slice(0,-1);  }
 0-08 создать и использовать уникальный ID  i (contact.id)
     createdContacts  = [...createdContacts, {id: Math.random(), name:name,...}]
     {#each createdContacts as contact, i (contact.id)}  
+0-55 создать MeetupGrid.svelte
 
 ---- cond-loops-07 ---?
 ---- cond-loops-08 ---?
