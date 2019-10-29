@@ -196,21 +196,26 @@ Section 05 - Course Project - First Steps
 prj-basics-01-added-header.zip
 ---- prj-basics-01-intro.mp4
 простой meetup сайт: создавать , фавориты, контакты, организация встреч
-1-35 все в Meetups директории - различные фичи
-2-09       UI директория - шаред UI компоненты
-5-00 CSS
-7-10 все в отд компоеннт src\UI\Header.svelte
-
 -практика в оснвах синтаксиса
 -прочувствование компонент
 -изучение из различных свойств
 -применение концепций в реальной среде
 prj-basics-02-meetup-items-with-styles.zip
 ---- prj-basics-02-setup-and-first-component.mp4
+1-35 все в Meetups директории - различные фичи
+2-09       UI директория - шаред UI компоненты
+5-00 CSS
+7-10 все в отд компоеннт src\UI\Header.svelte
+
 prj-basics-03-meetup-grid.zip
 ---- prj-basics-03-mounting-components.mp4
+можно и App, и Header сделать root компоненты
+
 prj-basics-04-added-textinput.zip
 ---- prj-basics-04-adding-some-data.mp4
+добавили массив, 
+3-08 теперь компонент для его визуализации
+
 ---- prj-basics-05-adding-a-meetupitem-component.mp4
 prj-basics-05-finished.zip
 ---- prj-basics-06-different-component-types.mp4
