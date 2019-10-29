@@ -116,16 +116,21 @@ assignment-solution.zip
 assignment-start.zip
 cond-loops-01-if.zip
 ---- cond-loops-01-intro.mp4
+---- cond-loops-02-if-statements-in-html.mp4
 Начальная КонтактКарта бехз кнопок и условия, пока 
 0-03 {#} - многострочная (блочная) команда, без пробела за ней сама команда
 0-04 {#if done }  ---обычная JS if-команда
   <ContactCard  userName={name} jobTitle={title} {description} userImage={image} />
      {/if}  ---конец if
 cond-loops-02-each.zip
----- cond-loops-02-if-statements-in-html.mp4
 ---- cond-loops-03-if-else-else-if.mp4
+{#if ... }  
+{:else if ....}  ---промежуточные блочные команды
+{:else}          ---^
+{/if}
 cond-loops-03-with-keys.zip
 cond-loops-04-more-on-keys.zip
+
 ---- cond-loops-04-outputting-lists-with-each.mp4
 ---- cond-loops-05-each-else-and-extracting-the-index.mp4
 ---- cond-loops-06-lists-and-keys.mp4
