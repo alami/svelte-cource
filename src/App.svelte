@@ -1,6 +1,5 @@
 <script>
 	import ContactCard from "./ContactCard.svelte"
-	import Password from "./Password.svelte"
 
   let name = "Max";
   let title = "";
@@ -58,5 +57,3 @@ function addContact() {
 {:else}
   <p>Please enter some data and hit the button!</p>
 {/if}
-
-<Password />

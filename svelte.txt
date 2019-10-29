@@ -161,7 +161,6 @@ function deleteLast() { createdContacts = createdContacts.slice(0,-1);  }
     <li on:click={removePassword.bind(this, i)}>{pw}</li>
   {/each}
  
-
 ---- cond-loops-10-wrap-up.mp4
 project-setup.zip
 ----------------------------------------
@@ -171,8 +170,24 @@ Introduction to events - Learn web development _ MDN.webarchive
 more-on-reactivity-01-finished.zip
 ---- more-reactivity-01-intro.mp4
 ---- more-reactivity-02-updating-arrays-and-objects-immutably.mp4
+ = - триггер изменений
 ---- more-reactivity-03-event-modifiers.mp4
+<button on:click|once =    --сработает только 1 раз
+<button on:click|passive = --
+<button on:click|capture = --
+<button on:click|stopPropagation = --более важные
+<button on:click|preventDefault  = --
+0-03 если внести  кнопку внутрь формы, то кнопка сработает и покажет  Карточку, 
+<div id="form">...
+  <button on:click={addContact} type="submit">Add Contact Card</button>
+но по умолчанию форма перегрузится, и скроет Карточку опять
 ---- more-reactivity-04-using-inline-functions.mp4
+вместо отд ф-ций лучше исп-ть стрелочные ф-ции, 
+function deleteFirst() {  createContacts = createContacts.slice1(1); }
+<button on:click = "{ event=>{    //--(аргумент)=>{тело ф-ции}
+    createContacts = createContacts.slice1(1);
+  }}"  >Delete First</button>
+
 ---- more-reactivity-05-wrap-up.mp4
 Reference vs Primitive Values.webarchive
 ----------------------------------------
