@@ -1,0 +1,898 @@
+﻿=====================================
+Section 01 - Getting Started
+---- getting-started-01-introduction.mp4
+
+---- getting-started-02-why-svelte.mp4
+0-00-19  веб 10 лет назад
+0-01-26 современный веб прил: на сервере - DB, аутент,тяж.подъем, APIs
+0-03-22 :на фронте - реактивно, поведение типа мобильное прил,  без перегрузок, SPAs
+0-06-70 https://academind.com/
+0-07-13
+----  getting-started-03-what-is-svelte.mp4
+0-01-00 svelt - стройный +-er
+0-04-29 - транслятор , а не ФВ
+----  getting-started-04-course-project-setup.mp4
+0-00 - Как он работает?  Реактивный UI, ..
+0-11
+----  getting-started-05-writing-some-svelte-code.mp4
+0-02 view/extention : materials icons  => Material Icon Theme
+0-02-25  : Svelte (James Birtles)
+0-06 node
+0-07 npm - new package manager
+0-08 npm install ; npm run dev ; localhost:5000
+0-09 public\bundle.js - svelt code
+  public\bundle.css
+  public\bundle.js.map - Для отладки
+0-11
+----  getting-started-06-course-outline.mp4
+0-01 src\App.svelte компонент, name - будет доступно извне 
+0-06-55 !! реальный код оображается после компиляции в public\bundle.js !!
+0-07-26
+----  getting-started-06-course-outline.mp4
+0-00 Обзор курса -> 
+Section 01 - Getting Started
+Section 02 - Base Syntax & Core Features
+Section 03 - Working with Conditional & Loops -- вывод списка
+Section 04 - A Closer Look at Reactivity
+Section 05 - Course Project - First Steps --большой проект курса
+
+Section 06 - Diving Deeper into Components--деление на компоненты
+Section 07 - Course Project - Components Deep Dive--^
+Section 08 - Working with Bindings & Forms--валидация итп
+Section 09 - Course Project - Bindings & Forms --^
+Section 10 - Managing State & Data with Stores
+Section 11 - Course Project - Stores--^
+Section 12 - Motion, Transitions & Animations --помогает понять что изменилось на стр-це
+Section 13 - Course Project - Transitions--^
+Section 14 - Network Interaction via Http
+Section 15 - Course Project - Http--^
+
+Section 16 - Special Elements
+Section 17 - Routing & Server-side Rendering with Sapper
+Section 18 - Deployment
+Section 19 - Course Roundup
+
+0-04-48
+----  getting-started-07-how-to-get-the-most-out-of-the-course.mp4
+0-03-27 
+----------------------------------------
+Section 02 - Base Syntax & Core Features
+----------------------------------------
+assignment-problem.zip
+assignment-solution.zip
+base-syntax-01-dynamic-values.zip
+---- base-syntax-01-intro.mp4
+0-0 что нужно во-1-х - Данные
+ -> Вывоод: печать текста, изм-ние CSS класса, динам изм.атрибутов и свойств HTML
+<- Ввод/Изм-ния : Ввод теста, нажатие кнопок, загрузка данных с сервера
+
+0-3-55
+
+base-syntax-02-two-way.zip
+---- base-syntax-02-understanding-the-curly-braces.mp4
+    <h1>Hello {name.toUpperCase()}, my age is {age+1}!</h1>
+     обычные JS ф-ции --^       инициализируются --^-- только в начале
+base-syntax-03-new-component.zip
+---- base-syntax-03-reactive-variables.mp4
+    $: up = name.toUpperCase(); -персчитывается как только изм-ся,
+        let - не обязательно
+---- base-syntax-04-more-reactivity.mp4
+Реактивность - Не тольк переменные но и др: ф-ция
+	$: console.log(name);
+
+
+base-syntax-04-nested-components.zip
+---- base-syntax-05-binding-to-element-properties.mp4
+input 1-направленное изменение
+    <input type="text" value="{name}">
+чтобы сдклвть 2направленный
+    <input type="text" value="{name}" on:input="{nameInput}">
+
+base-syntax-05-shorthands.zip
+base-syntax-06-dynamic-css-classes.zip
+---- base-syntax-06-two-way-binding-shortcut.mp4
+тоже самое можно сделать др.директивой
+    <input type="text" bind:value="{name}">
+
+---- base-syntax-07-multiple-components.mp4
+multiple-components- это строительные блоки UI как и Angular, React, Vue
+.svelte - обязаьельно для компилятора !!
+	import ContactCard from "./ContactCard.svelte"
+обязательно с большой буквы
+0-06 но стили из просачивабтся межуд компонентами, даже вложенными
+  App -|- ContactCard
+0-07 это вложеггые компоненты
+---- base-syntax-08-component-communication-via-props.mp4
+---- base-syntax-09-more-bindings.mp4
+---- base-syntax-10-self-extending-properties.mp4
+---- base-syntax-11-outputting-html-content.mp4
+---- base-syntax-12-dynamic-classes.mp4
+---- base-syntax-15-wrap-up.mp4
+contact-card-with-style.zip
+label - JavaScript _ MDN.webarchive
+----------------------------------------
+Section 03 - Working with Conditional & Loops
+----------------------------------------
+assignment-solution.zip
+assignment-start.zip
+cond-loops-01-if.zip
+cond-loops-01-intro.mp4
+cond-loops-02-each.zip
+cond-loops-02-if-statements-in-html.mp4
+cond-loops-03-if-else-else-if.mp4
+cond-loops-03-with-keys.zip
+cond-loops-04-more-on-keys.zip
+cond-loops-04-outputting-lists-with-each.mp4
+cond-loops-05-each-else-and-extracting-the-index.mp4
+cond-loops-06-lists-and-keys.mp4
+cond-loops-09-a-closer-look-at-list-keys.mp4
+cond-loops-10-wrap-up.mp4
+project-setup.zip
+----------------------------------------
+Section 04 - A Closer Look at Reactivity
+----------------------------------------
+Introduction to events - Learn web development _ MDN.webarchive
+more-on-reactivity-01-finished.zip
+more-reactivity-01-intro.mp4
+more-reactivity-02-updating-arrays-and-objects-immutably.mp4
+more-reactivity-03-event-modifiers.mp4
+more-reactivity-04-using-inline-functions.mp4
+more-reactivity-05-wrap-up.mp4
+Reference vs Primitive Values.webarchive
+----------------------------------------
+Section 05 - Course Project - First Steps
+----------------------------------------
+prj-basics-01-added-header.zip
+prj-basics-01-intro.mp4
+prj-basics-02-meetup-items-with-styles.zip
+prj-basics-02-setup-and-first-component.mp4
+prj-basics-03-meetup-grid.zip
+prj-basics-03-mounting-components.mp4
+prj-basics-04-added-textinput.zip
+prj-basics-04-adding-some-data.mp4
+prj-basics-05-adding-a-meetupitem-component.mp4
+prj-basics-05-finished.zip
+prj-basics-06-different-component-types.mp4
+prj-basics-07-passing-data-into-components.mp4
+prj-basics-08-adding-a-meetupgrid-component.mp4
+prj-basics-09-adding-meetups-via-a-form.mp4
+prj-basics-10-creating-a-textinput-component.mp4
+prj-basics-11-added-custom-button-component.mp4
+prj-basics-12-wrap-up.mp4
+project-setup.zip
+----------------------------------------
+Section 06 - Diving Deeper into Components
+----------------------------------------
+cmp-01-events.zip
+cmp-01-intro.mp4
+cmp-02-component-types.mp4
+cmp-02-spread-and-default-props.zip
+cmp-03-component-communication-overview.mp4
+cmp-04-event-forwarding.mp4
+cmp-04-slot-props.zip
+cmp-05-custom-events.mp4
+cmp-05-lifecycle-hooks.zip
+cmp-06-extracting-event-data.mp4
+cmp-07-spread-props-and-default-props.mp4
+cmp-08-slots.mp4
+cmp-09-named-and-default-slots.mp4
+cmp-10-opening-and-closing-a-modal.mp4
+cmp-11-slot-props.mp4
+cmp-12-component-lifecycle-theory.mp4
+cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4
+cmp-14-using-tick.mp4
+cmp-15-wrap-up.mp4
+----------------------------------------
+Section 07 - Course Project - Components Deep Dive
+----------------------------------------
+prj-cmp-01-events.zip
+prj-cmp-01-intro.mp4
+prj-cmp-02-badge-with-slot.zip
+prj-cmp-02-default-props.mp4
+prj-cmp-03-custom-events.mp4
+prj-cmp-03-form-in-component.zip
+prj-cmp-04-added-modal.zip
+prj-cmp-04-slots.mp4
+prj-cmp-05-creating-an-edit-meetup-component.mp4
+prj-cmp-05-finished.zip
+prj-cmp-06-communicating-between-components.mp4
+prj-cmp-07-more-slots.mp4
+prj-cmp-08-adding-a-modal.mp4
+prj-cmp-09-finishing-the-modal-edit-process.mp4
+prj-cmp-10-wrap-up.mp4
+----------------------------------------
+Section 08 - Working with Bindings & Forms
+----------------------------------------
+bind-form-01-custom-component-binding.zip
+bind-form-02-group-bindings.zip
+bind-form-03-bind-select.zip
+bind-form-04-bind-this.zip
+bind-form-05-validation.zip
+bindings-01-intro.mp4
+bindings-02-two-way-binding-refresher.mp4
+bindings-03-custom-component-bindings.mp4
+bindings-04-automatic-number-conversion.mp4
+bindings-05-checkboxes-and-radio-buttons.mp4
+bindings-06-binding-select-dropdowns.mp4
+bindings-07-binding-to-elements.mp4
+bindings-08-binding-to-component-references.mp4
+bindings-09-validation.mp4
+bindings-10-wrap-up.mp4
+starting-project.zip
+----------------------------------------
+Section 09 - Course Project - Bindings & Forms
+----------------------------------------
+prj-bindings-01-intro.mp4
+prj-bindings-02-different-validation-solutions.mp4
+prj-bindings-03-adding-validation-output-to-textinput.mp4
+prj-bindings-04-adding-first-validation-logic.mp4
+prj-bindings-05-finishing-textinput-validation.mp4
+prj-bindings-06-overall-form-validation.mp4
+prj-bindings-07-improvements-and-wrap-up.mp4
+prj-form-01-added-validation.zip
+prj-form-02-check-touched.zip
+prj-form-03-more-input-validations.zip
+prj-form-04-full-form-validation.zip
+prj-form-05-textarea.zip
+----------------------------------------
+Section 10 - Managing State & Data with Stores
+----------------------------------------
+starting-project.zip
+stores-01-a-basic-writable-store.zip
+stores-01-intro.mp4
+stores-02-subscribe-and-unsubscribe.zip
+stores-02-understanding-the-problem.mp4
+stores-03-auto-subscriptions.zip
+stores-03-creating-a-store-and-subscribing-to-it.mp4
+stores-04-one-time-access.zip
+stores-04-updating-store-data.mp4
+stores-05-readable-store.zip
+stores-05-stores-and-stateful-and-presentational-components.mp4
+stores-06-finished.zip
+stores-06-managing-store-subscriptions.mp4
+stores-07-auto-subscriptions.mp4
+stores-08-adding-another-store.mp4
+stores-09-subscribing-for-a-short-period.mp4
+stores-10-readable-stores.mp4
+stores-11-custom-stores.mp4
+stores-12-wrap-up.mp4
+
+----------------------------------------
+Section 11 - Course Project - Stores
+----------------------------------------
+prj-stores-01-intro.mp4
+prj-stores-01-meetup-store.zip
+prj-stores-02-custom-store.zip
+prj-stores-02-setting-up-a-store.mp4
+prj-stores-03-custom-store-for-add-and-toggle-fav.mp4
+prj-stores-03-details-page.zip
+prj-stores-04-editing-meetups.zip
+prj-stores-04-using-stores-in-different-components.mp4
+prj-stores-05-deleting-meetups.zip
+prj-stores-05-meetup-detail-page.mp4
+prj-stores-06-added-filter.zip
+prj-stores-06-preparing-the-edit-form.mp4
+prj-stores-07-continuing-work-on-editing.mp4
+prj-stores-07-finished.zip
+prj-stores-08-adding-delete-functionality.mp4
+prj-stores-09-adding-a-filter-switch.mp4
+prj-stores-10-final-steps.mp4
+prj-stores-11-wrap-up.mp4
+----------------------------------------
+Section 12 - Motion, Transitions & Animations
+----------------------------------------
+starting-project.zip
+Transitions _ Deferred transitions  Svelte Tutorial.webarchive
+transitions-01-intro.mp4
+transitions-01-tweened.zip
+transitions-02-spring.zip
+transitions-02-tweened-store.mp4
+transitions-03-prepared-setup.zip
+transitions-03-spring-store.mp4
+transitions-04-adding-transitions.zip
+transitions-04-transition-preparation.mp4
+transitions-05-element-transitions.mp4
+transitions-05-local-transitions-and-events.zip
+transitions-06-more-on-transition.mp4
+transitions-06-passive-animations.zip
+transitions-07-in-and-out.mp4
+transitions-08-animating-passive-items.mp4
+transitions-09-wrap-up.mp4
+----------------------------------------
+Section 13 - Course Project - Transitions
+----------------------------------------
+prj-transitions-01-intro.mp4
+prj-transitions-01-transition-modal.zip
+prj-transitions-02-animating-the-modal.mp4
+prj-transitions-02-transition-list.zip
+prj-transitions-03-finished.zip
+prj-transitions-03-transition-and-animate-meetup-items.mp4
+prj-transitions-04-animate-bade-and-wrap-up.mp4
+----------------------------------------
+----------------------------------------
+Section 14 - Network Interaction via Http
+----------------------------------------
+http-01-intro.mp4
+http-01-starting-code.zip
+http-02-adding-a-rest-api.mp4
+http-02-sending-requests.zip
+http-03-extracting-data.zip
+http-03-sending-data-via-a-post-request.mp4
+http-04-showing-a-loading-indicator-and-sending-correct-data.mp4
+http-04-using-a-loading-spinner.zip
+http-05-fetching-and-transforming-data.mp4
+http-05-the-await-block.zip
+http-06-connecting-a-store.zip
+http-06-things-to-consider.mp4
+http-07-using-the-await-block.mp4
+http-08-http-when-using-a-store.mp4
+http-09-wrap-up.mp4
+----------------------------------------
+Section 15 - Course Project - Http
+----------------------------------------
+prj-http-01-intro.mp4
+prj-http-01-storing-meetups.zip
+prj-http-02-loading-spinner-and-fetching.zip
+prj-http-02-storing-meetups-via-post.mp4
+prj-http-03-fetching-and-transforming-data.mp4
+prj-http-03-updating-meetups.zip
+prj-http-04-adding-a-loading-spinner.mp4
+prj-http-04-deleting-meetups.zip
+prj-http-05-finished.zip
+prj-http-05-updating-via-patch.mp4
+prj-http-06-favorite-and-delete.mp4
+prj-http-07-fixing-the-order.mp4
+prj-http-08-error-handling.mp4
+prj-http-09-wrap-up.mp4
+----------------------------------------
+Section 16 - Special Elements
+----------------------------------------
+spec-elements-01-dynamic-components.zip
+spec-elements-01-intro.mp4
+spec-elements-02-dynamic-component.mp4
+spec-elements-02-recursive-components.zip
+spec-elements-03-recursive-components.mp4
+spec-elements-03-window-head-body.zip
+spec-elements-04-script-context-module.zip
+spec-elements-04-window-body-head.mp4
+spec-elements-05-context-module-scripts.mp4
+starting-project.zip
+----------------------------------------
+Section 17 - Routing & Server-side Rendering with Sapper
+----------------------------------------
+project-setup.zip
+sapper-01-first-steps.zip
+sapper-01-intro.mp4
+sapper-02-finished-first-walkthrough.zip
+sapper-02-what-and-why.mp4
+sapper-03-meetups-client-side-fetching.zip
+sapper-03-understanding-the-folder-structure.mp4
+sapper-04-inspecting-the-web-page.mp4
+sapper-04-prefetching.zip
+sapper-05-adding-a-store.zip
+sapper-05-filenames-and-routes.mp4
+sapper-06-added-editing-and-deleting.zip
+sapper-06-error-and-layout.mp4
+sapper-07-finished.zip
+sapper-07-preloading-data.mp4
+sapper-08-how-preloading-and-data-fetching-works.mp4
+sapper-09-moving-meetup-files-into-the-sapper-project.mp4
+sapper-10-fetching-data-on-the-client-side.mp4
+sapper-11-prefetching-data-on-the-server.mp4
+sapper-12-syncing-fetched-data-and-store.mp4
+sapper-13-editing-and-deleting.mp4
+sapper-14-rendering-the-meetup-detail-page.mp4
+sapper-15-adding-global-css.mp4
+sapper-16-wrap-up.mp4
+----------------------------------------
+Section 18 - Deployment
+----------------------------------------
+deployment-01-finished.zip
+deployment-01-intro.mp4
+deployment-02-app-types-and-deployment-options.mp4
+deployment-03-building-the-app.mp4
+deployment-04-rendering-content-correctly-on-the-server.mp4
+deployment-05-deploying-a-ssr-app.mp4
+deployment-06-hosting-a-static-site.mp4
+deployment-07-wrap-up.mp4
+----------------------------------------
+Section 19 - Course Roundup
+----------------------------------------
+course-roundup.mp4
+roundup-svelte-vs-alternatives.mp4
+----------------------------------------
+
+=====================================
+Section 01 - Getting Started
+  getting-started-01-introduction.mp4
+  getting-started-02-why-svelte.mp4
+  getting-started-03-what-is-svelte.mp4
+  getting-started-04-course-project-setup.mp4
+  getting-started-05-writing-some-svelte-code.mp4
+  getting-started-06-course-outline.mp4
+  getting-started-07-how-to-get-the-most-out-of-the-course.mp4
+----------------------------------------
+Section 02 - Base Syntax & Core Features
+----------------------------------------
+assignment-problem.zip
+assignment-solution.zip
+base-syntax-01-dynamic-values.zip
+base-syntax-01-intro.mp4
+base-syntax-02-two-way.zip
+base-syntax-02-understanding-the-curly-braces.mp4
+base-syntax-03-new-component.zip
+base-syntax-03-reactive-variables.mp4
+base-syntax-04-more-reactivity.mp4
+base-syntax-04-nested-components.zip
+base-syntax-05-binding-to-element-properties.mp4
+base-syntax-05-shorthands.zip
+base-syntax-06-dynamic-css-classes.zip
+base-syntax-06-two-way-binding-shortcut.mp4
+base-syntax-07-multiple-components.mp4
+base-syntax-08-component-communication-via-props.mp4
+base-syntax-09-more-bindings.mp4
+base-syntax-10-self-extending-properties.mp4
+base-syntax-11-outputting-html-content.mp4
+base-syntax-12-dynamic-classes.mp4
+base-syntax-15-wrap-up.mp4
+contact-card-with-style.zip
+label - JavaScript _ MDN.webarchive
+----------------------------------------
+Section 03 - Working with Conditional & Loops
+----------------------------------------
+assignment-solution.zip
+assignment-start.zip
+cond-loops-01-if.zip
+cond-loops-01-intro.mp4
+cond-loops-02-each.zip
+cond-loops-02-if-statements-in-html.mp4
+cond-loops-03-if-else-else-if.mp4
+cond-loops-03-with-keys.zip
+cond-loops-04-more-on-keys.zip
+cond-loops-04-outputting-lists-with-each.mp4
+cond-loops-05-each-else-and-extracting-the-index.mp4
+cond-loops-06-lists-and-keys.mp4
+cond-loops-09-a-closer-look-at-list-keys.mp4
+cond-loops-10-wrap-up.mp4
+project-setup.zip
+----------------------------------------
+Section 04 - A Closer Look at Reactivity
+----------------------------------------
+Introduction to events - Learn web development _ MDN.webarchive
+more-on-reactivity-01-finished.zip
+more-reactivity-01-intro.mp4
+more-reactivity-02-updating-arrays-and-objects-immutably.mp4
+more-reactivity-03-event-modifiers.mp4
+more-reactivity-04-using-inline-functions.mp4
+more-reactivity-05-wrap-up.mp4
+Reference vs Primitive Values.webarchive
+----------------------------------------
+Section 05 - Course Project - First Steps
+----------------------------------------
+prj-basics-01-added-header.zip
+prj-basics-01-intro.mp4
+prj-basics-02-meetup-items-with-styles.zip
+prj-basics-02-setup-and-first-component.mp4
+prj-basics-03-meetup-grid.zip
+prj-basics-03-mounting-components.mp4
+prj-basics-04-added-textinput.zip
+prj-basics-04-adding-some-data.mp4
+prj-basics-05-adding-a-meetupitem-component.mp4
+prj-basics-05-finished.zip
+prj-basics-06-different-component-types.mp4
+prj-basics-07-passing-data-into-components.mp4
+prj-basics-08-adding-a-meetupgrid-component.mp4
+prj-basics-09-adding-meetups-via-a-form.mp4
+prj-basics-10-creating-a-textinput-component.mp4
+prj-basics-11-added-custom-button-component.mp4
+prj-basics-12-wrap-up.mp4
+project-setup.zip
+----------------------------------------
+Section 06 - Diving Deeper into Components
+----------------------------------------
+cmp-01-events.zip
+cmp-01-intro.mp4
+cmp-02-component-types.mp4
+cmp-02-spread-and-default-props.zip
+cmp-03-component-communication-overview.mp4
+cmp-04-event-forwarding.mp4
+cmp-04-slot-props.zip
+cmp-05-custom-events.mp4
+cmp-05-lifecycle-hooks.zip
+cmp-06-extracting-event-data.mp4
+cmp-07-spread-props-and-default-props.mp4
+cmp-08-slots.mp4
+cmp-09-named-and-default-slots.mp4
+cmp-10-opening-and-closing-a-modal.mp4
+cmp-11-slot-props.mp4
+cmp-12-component-lifecycle-theory.mp4
+cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4
+cmp-14-using-tick.mp4
+cmp-15-wrap-up.mp4
+----------------------------------------
+Section 07 - Course Project - Components Deep Dive
+----------------------------------------
+prj-cmp-01-events.zip
+prj-cmp-01-intro.mp4
+prj-cmp-02-badge-with-slot.zip
+prj-cmp-02-default-props.mp4
+prj-cmp-03-custom-events.mp4
+prj-cmp-03-form-in-component.zip
+prj-cmp-04-added-modal.zip
+prj-cmp-04-slots.mp4
+prj-cmp-05-creating-an-edit-meetup-component.mp4
+prj-cmp-05-finished.zip
+prj-cmp-06-communicating-between-components.mp4
+prj-cmp-07-more-slots.mp4
+prj-cmp-08-adding-a-modal.mp4
+prj-cmp-09-finishing-the-modal-edit-process.mp4
+prj-cmp-10-wrap-up.mp4
+----------------------------------------
+Section 08 - Working with Bindings & Forms
+----------------------------------------
+bind-form-01-custom-component-binding.zip
+bind-form-02-group-bindings.zip
+bind-form-03-bind-select.zip
+bind-form-04-bind-this.zip
+bind-form-05-validation.zip
+bindings-01-intro.mp4
+bindings-02-two-way-binding-refresher.mp4
+bindings-03-custom-component-bindings.mp4
+bindings-04-automatic-number-conversion.mp4
+bindings-05-checkboxes-and-radio-buttons.mp4
+bindings-06-binding-select-dropdowns.mp4
+bindings-07-binding-to-elements.mp4
+bindings-08-binding-to-component-references.mp4
+bindings-09-validation.mp4
+bindings-10-wrap-up.mp4
+starting-project.zip
+----------------------------------------
+Section 09 - Course Project - Bindings & Forms
+----------------------------------------
+prj-bindings-01-intro.mp4
+prj-bindings-02-different-validation-solutions.mp4
+prj-bindings-03-adding-validation-output-to-textinput.mp4
+prj-bindings-04-adding-first-validation-logic.mp4
+prj-bindings-05-finishing-textinput-validation.mp4
+prj-bindings-06-overall-form-validation.mp4
+prj-bindings-07-improvements-and-wrap-up.mp4
+prj-form-01-added-validation.zip
+prj-form-02-check-touched.zip
+prj-form-03-more-input-validations.zip
+prj-form-04-full-form-validation.zip
+prj-form-05-textarea.zip
+----------------------------------------
+Section 10 - Managing State & Data with Stores
+----------------------------------------
+starting-project.zip
+stores-01-a-basic-writable-store.zip
+stores-01-intro.mp4
+stores-02-subscribe-and-unsubscribe.zip
+stores-02-understanding-the-problem.mp4
+stores-03-auto-subscriptions.zip
+stores-03-creating-a-store-and-subscribing-to-it.mp4
+stores-04-one-time-access.zip
+stores-04-updating-store-data.mp4
+stores-05-readable-store.zip
+stores-05-stores-and-stateful-and-presentational-components.mp4
+stores-06-finished.zip
+stores-06-managing-store-subscriptions.mp4
+stores-07-auto-subscriptions.mp4
+stores-08-adding-another-store.mp4
+stores-09-subscribing-for-a-short-period.mp4
+stores-10-readable-stores.mp4
+stores-11-custom-stores.mp4
+stores-12-wrap-up.mp4
+
+----------------------------------------
+Section 11 - Course Project - Stores
+----------------------------------------
+prj-stores-01-intro.mp4
+prj-stores-01-meetup-store.zip
+prj-stores-02-custom-store.zip
+prj-stores-02-setting-up-a-store.mp4
+prj-stores-03-custom-store-for-add-and-toggle-fav.mp4
+prj-stores-03-details-page.zip
+prj-stores-04-editing-meetups.zip
+prj-stores-04-using-stores-in-different-components.mp4
+prj-stores-05-deleting-meetups.zip
+prj-stores-05-meetup-detail-page.mp4
+prj-stores-06-added-filter.zip
+prj-stores-06-preparing-the-edit-form.mp4
+prj-stores-07-continuing-work-on-editing.mp4
+prj-stores-07-finished.zip
+prj-stores-08-adding-delete-functionality.mp4
+prj-stores-09-adding-a-filter-switch.mp4
+prj-stores-10-final-steps.mp4
+prj-stores-11-wrap-up.mp4
+----------------------------------------
+Section 12 - Motion, Transitions & Animations
+----------------------------------------
+starting-project.zip
+Transitions _ Deferred transitions  Svelte Tutorial.webarchive
+transitions-01-intro.mp4
+transitions-01-tweened.zip
+transitions-02-spring.zip
+transitions-02-tweened-store.mp4
+transitions-03-prepared-setup.zip
+transitions-03-spring-store.mp4
+transitions-04-adding-transitions.zip
+transitions-04-transition-preparation.mp4
+transitions-05-element-transitions.mp4
+transitions-05-local-transitions-and-events.zip
+transitions-06-more-on-transition.mp4
+transitions-06-passive-animations.zip
+transitions-07-in-and-out.mp4
+transitions-08-animating-passive-items.mp4
+transitions-09-wrap-up.mp4
+----------------------------------------
+Section 13 - Course Project - Transitions
+----------------------------------------
+prj-transitions-01-intro.mp4
+prj-transitions-01-transition-modal.zip
+prj-transitions-02-animating-the-modal.mp4
+prj-transitions-02-transition-list.zip
+prj-transitions-03-finished.zip
+prj-transitions-03-transition-and-animate-meetup-items.mp4
+prj-transitions-04-animate-bade-and-wrap-up.mp4
+----------------------------------------
+----------------------------------------
+Section 14 - Network Interaction via Http
+----------------------------------------
+http-01-intro.mp4
+http-01-starting-code.zip
+http-02-adding-a-rest-api.mp4
+http-02-sending-requests.zip
+http-03-extracting-data.zip
+http-03-sending-data-via-a-post-request.mp4
+http-04-showing-a-loading-indicator-and-sending-correct-data.mp4
+http-04-using-a-loading-spinner.zip
+http-05-fetching-and-transforming-data.mp4
+http-05-the-await-block.zip
+http-06-connecting-a-store.zip
+http-06-things-to-consider.mp4
+http-07-using-the-await-block.mp4
+http-08-http-when-using-a-store.mp4
+http-09-wrap-up.mp4
+----------------------------------------
+Section 15 - Course Project - Http
+----------------------------------------
+prj-http-01-intro.mp4
+prj-http-01-storing-meetups.zip
+prj-http-02-loading-spinner-and-fetching.zip
+prj-http-02-storing-meetups-via-post.mp4
+prj-http-03-fetching-and-transforming-data.mp4
+prj-http-03-updating-meetups.zip
+prj-http-04-adding-a-loading-spinner.mp4
+prj-http-04-deleting-meetups.zip
+prj-http-05-finished.zip
+prj-http-05-updating-via-patch.mp4
+prj-http-06-favorite-and-delete.mp4
+prj-http-07-fixing-the-order.mp4
+prj-http-08-error-handling.mp4
+prj-http-09-wrap-up.mp4
+----------------------------------------
+Section 16 - Special Elements
+----------------------------------------
+spec-elements-01-dynamic-components.zip
+spec-elements-01-intro.mp4
+spec-elements-02-dynamic-component.mp4
+spec-elements-02-recursive-components.zip
+spec-elements-03-recursive-components.mp4
+spec-elements-03-window-head-body.zip
+spec-elements-04-script-context-module.zip
+spec-elements-04-window-body-head.mp4
+spec-elements-05-context-module-scripts.mp4
+starting-project.zip
+----------------------------------------
+Section 17 - Routing & Server-side Rendering with Sapper
+----------------------------------------
+project-setup.zip
+sapper-01-first-steps.zip
+sapper-01-intro.mp4
+sapper-02-finished-first-walkthrough.zip
+sapper-02-what-and-why.mp4
+sapper-03-meetups-client-side-fetching.zip
+sapper-03-understanding-the-folder-structure.mp4
+sapper-04-inspecting-the-web-page.mp4
+sapper-04-prefetching.zip
+sapper-05-adding-a-store.zip
+sapper-05-filenames-and-routes.mp4
+sapper-06-added-editing-and-deleting.zip
+sapper-06-error-and-layout.mp4
+sapper-07-finished.zip
+sapper-07-preloading-data.mp4
+sapper-08-how-preloading-and-data-fetching-works.mp4
+sapper-09-moving-meetup-files-into-the-sapper-project.mp4
+sapper-10-fetching-data-on-the-client-side.mp4
+sapper-11-prefetching-data-on-the-server.mp4
+sapper-12-syncing-fetched-data-and-store.mp4
+sapper-13-editing-and-deleting.mp4
+sapper-14-rendering-the-meetup-detail-page.mp4
+sapper-15-adding-global-css.mp4
+sapper-16-wrap-up.mp4
+----------------------------------------
+Section 18 - Deployment
+----------------------------------------
+deployment-01-finished.zip
+deployment-01-intro.mp4
+deployment-02-app-types-and-deployment-options.mp4
+deployment-03-building-the-app.mp4
+deployment-04-rendering-content-correctly-on-the-server.mp4
+deployment-05-deploying-a-ssr-app.mp4
+deployment-06-hosting-a-static-site.mp4
+deployment-07-wrap-up.mp4
+----------------------------------------
+Section 19 - Course Roundup
+----------------------------------------
+course-roundup.mp4
+roundup-svelte-vs-alternatives.mp4
+----------------------------------------
+
+================================================================
+
+452684 Разрабатываем игру на Svelte 3 --- https://github.com/alami/svelte-game
+--------------------------------------------------------
+419653 - Как сделать поиск пользователей по GitHub без React + RxJS 6 + Recompose --ответ на
+ 419559 - Как сделать поиск пользователей по GitHub используя React + RxJS 6 + Recompose 7 августа 2018
+  https://v2.svelte.dev/repl?version=2.9.11&gist=0a5aa0a79dd7a6c1361ff90a67dc3a55
+  или https://codesandbox.io/s/svelte
+  VScode плагин :
+    https://marketplace.visualstudio.com/items?itemName=JamesBirtles.svelte-vscode
+  >git clone https://github.com/alami/svelte-git-user.git
+  >npx degit sveltejs/template svelte-git-user --force
+
+--------------------------------------------------------
+446026 Почему SvelteJS возможно лучший фреймворк для новых веб-разработчиков
+  1) кот на самом деле не является фреймворком.
+  В его основе лежит инструмент для компиляции компонентов на этапе сборки,
+  позволяющий загрузить на страницу лишь необходимое для отображения вашего приложения.
+  Это означает, что нет виртуального DOM, нет фреймворков поверх фреймворков и нет фреймворка в рантайме.
+  2)- любая переменная в скрипте вашего компонента доступна из разметки.
+  нет специального синтаксиса, который нужно изучать для управления состоянием.
+  Angular-$scope, React-this.state, data-Vue
+  не надо задумываться как подключить декларативную функцию JS к какому-то DOM селектору.
+   - просто вызывается повторный рендеринг всякий раз, когда их значения изменяются.
+  3)импортируются также легко, как и традиционные компоненты,напр .html,
+      import Wizardry from './wizardry.html';
+  Это работает очень похоже на map из JSX, но без всех этих вложенных скобок,
+  (-)передачи пропсов компонентам - слишком магическим -
+  Для обработки пропсов мы просто передаем их компоненту, куда бы он ни импортировался…
+          <Profile coolGuy="Scott Tolinski" />
+          … и получаем эту переменную как экспортированный «let»:
+          <!-- profile.html -->
+          <p>{coolGuy}</p>
+          <script>
+              export let coolGuy = '';
+          </script>
+  мы экспортируем то, к чему должны получить доступ за пределами компонента,
+   и импортируем то, что хотим использовать в нашем компоненте.
+  --Vue изначально очень многое взял от Ractive. Сейчас клонирует решения из Angular/React.
+    Вообще, китайский менталитет чуствуется конечно)))
+--------------------------------------------------------
+420113 Легенда о Фреймворке Всевластия
+  есть приложение на React. теперь все компоненты будем писать на Svelte и использовать во всех проектах.
+  Create React App - Для начала создадим новый React проект,
+ воспользовавшись де-факто стандартной тулзой — create-react-app:
+        npx create-react-app my-app
+        cd my-app
+        npm start
+  Ок, если зайти на localhost:3000
+ERROR
+------------------------------------------------------
+414869 - Магически исчезающий JS фреймворк  19 декабря 2017   Павел Малышев PaulMaly
+   Рич Харрис (Rich Harris), автор таких прикольных штук как Rollup, Buble, Roadtrip, а также того самого Ractive.
+  В 2016 году Рич оставил Ractive, чтобы развивать Svelte
+ BAD svelte 2
+------------------------------------------------------
+417483 - Сравнение JS-фреймворков: React, Vue и Hyperapp  20 июля 2018
+--------------------------------------------------------
+417747 - Re: «Сравнение JS-фреймворков: React, Vue и Hyperapp» 22 июля 2018
+------------------------------------------------------------
+471702 - Кибернетически улучшенные Web-приложения
+--------------------------------------------------------
+453458 Настоящее реактивное программирование в Svelte 3.0
+ru.svelte.dev/blog/sapper-towards-the-ideal-web-app-framework
+https://www.valentinog.com/blog/svelte/
+ https://www.valentinog.com/blog/svelte/#Svelte_3_tutorial_fetching_data_with_Svelte
+   http://qaru.site/questions/2331316/react-js-uncaught-in-promise-syntaxerror-unexpected-token-in-json-at-position-0
+  > git clone git@github.com:yourusername/svelte-tutorial.git
+  > npx degit sveltejs/template svelte-tutorial --force
+ --https://dev.to/jacobherrington/setting-up-a-svelte-project-in-seconds-with-degit-4dpa
+   Предпосылка degit (Rich Harris (who started Svelte)) чрезвычайно проста по дизайну - она копирует существующие репозитории git
+   1) install degit with your preferred package manager:
+   > npm install -g degit
+   2)degit  - the tool to create copies of a git repository (you can specify if you want
+      to use BitBucket or GitLab, but it defaults to GitHub repositories):
+   > npx degit user/repo-name target-directory
+npm install -g degit # install degit
+npx degit sveltejs/template my-svelte-project # copy the Svelte template
+cd my-svelte-project
+npm install # install dependencies
+npm run dev # kick off a server and auto-compile
+--------------------------------------------------------
+469361 - Боль и слёзы в Svelte 3 => 469411 -..: ответ
+  https://svelte.dev/docs#use_action - механизм actions, с помощью которого интеграция со сторонней DOM либой
+   сводится к написанию небольшой функции: https://svelte.dev/repl/22dadc30bdbf454e96299287b959ac7b?version=3.12.1
+  Svelte — это UI фреймворк и он агностичен к роутеру
+    легко интегрировать любой независимый роутер буквально за пару минут и строк кода. На примере page.js:
+    github.com/ryanatkn/awesome-svelte-resources#routers -другие
+  работу с пропсами, которая в Svelte ведется через export'ы из компонента,
+     но всегда будет предупреждение, если попытаться прокинуть пропс не определенный компонентом
+  обычно мои компоненты имеют «бюджет» в 200 строк кода вместе со стилями.Если сильно больше,
+    создаю для компонента папку и начинаю выносить части в отдельный файлы
+    с помощью svelte-preprocess, начиная со стилей.
+  Svelte вообще нет такого разделения, там переменные живут обычно JS жизнью — существуют в своем скоупе,
+    некоторые имеют скоуп всего компонента, другие обитают в рамках одной функции или иного блока кода
+    DOM пересчитывается исключительно тогда, когда изменяется связанная с ним часть стейта.
+  По-умолчанию, Svelte идет в поставке с Rollup, который «из коробки» поддерживает намного меньше фичей,
+    чем Webpack, зато собирает более оптимизированные и более нативные бандлы.
+  Если вы пишете энтерпрайз, скорее всего лучше подойдет Angular или Ember.
+    Svelte, ровно как и React и Vue, не всегда хороший выбор для этого.
+
+https://habr.com/ru/company/oleg-bunin/blog/450822/ - Исчезающие фреймворки
+   Павел Малышев Евангелист фреймворка Svelte JS в России, ведет https://t.me/sveltejs
+
+345028 -svelte
+348964
+414869 Исчезающие фреймворки
+  Svelte — это «compile-time» фреймворк, который не имеет специфического рантайма на клиенте.
+  Не отправлять большие пакеты JavaScript нашим пользователям
+   и ожидать, что их браузеры будут анализировать и выполнять скрипты
+  а компилирует ваше приложение в небольшие, автономные, ванильные модули JavaScript.
+  компонент Svelte также можно компилировать непосредственно в Web Component
+  (вот здесь пример — если установить customElement здесь — в результате мы получим).
+  Rich Harris, создатель Svelte (и Rollup и многих других удивительных вещей!
+  Svelte, сам по себе, очень минималистичен, но существует также
+  Sapper (Svelte App Maker — прим.) — полнофункциональный фреймворк на его основе.
+  Вдохновленный Next.js, Sapper включает в себя рендеринг на стороне сервера,
+  разделение кода, scoped-стили, декларативную маршрутизацию и hot-reload.
+  Кроме того, стартовый шаблон Sapper дает по умолчанию PWA,
+  с манифестом веб-приложения и service worker с автоматическим кэшированием ресурсов.
+
+353896 SvelteJS: Релиз второй версии
+  https://svelte.technology/repl?version=2.0.0&gist=8439585e9574d93409cd292ed29d68ee
+  накатал свою собственную «тудушечку».
+
+---- svelte ---------------------------------------------------------------------------
+https://www.youtube.com/playlist?list=PLRoAxsxHn1OwMmLQj2kR8xj2vEvlz0Xcn - svelte
+  1 55:46  Svelte 3 - Quickstart Tutorial (Getting Started With Svelte.js) -CodingTheSmartWay.com
+  2 59:43  Svelte 3 Crash Course for TOTAL Beginners - DesignCourse
+  3 54:53  Svelte Tutorial - Is it better than React? - freeCodeCamp.org
+  4 15:54  Svelte & Firebase (Firestore, Create, Read, Update, Delete, in Realtime) - Sveltecasts
+  5 14:46  Svelte 3 Reaction & QuickStart Tutorial Fireship
+  6  9:05  Svelte 3 and RxFire using Firebase Firestore and Authentication - AJonP
+
+---- Puppeteer --------------------------------------------------------------------------------
+https://habr.com/ru/company/jugru/blog/472020/ - Tоп-10: лучшие доклады HolyJS 2019 Piter
+  https://youtu.be/CwU-OiS_PEQ - 6. Илья Климов — Ламповый CI/CD. Как и с чего начать
+  https://www.youtube.com/watch?v=FOCDEk-OLTI - 5. Николай Матвиенко — Обработка озера данных на Node.js в serverless-архитектуре
+  https://youtu.be/VdoPraj0QqU - 2. Павел Черторогов — ApolloClient или Relay с фрагментами,
+   «волосатый» GraphQL и TypeScript — всё, что нужно для правильного статического анализа React-приложения
+  https://youtu.be/z0TP-9QSdHI - 9. Алексей Козятинский — Протокол Chrome DevTools - Puppeteer
+  https://youtu.be/r-2a8G0hXKc - 3. Andrey Lushnikov — Modern web testing and automation with Puppeteer
+-----------------------------------------------------------------------------------
+435908 - Аскетичный вебъ: прототип барахолки на go и js (svelte)
+  https://github.com/ddidwyll/comico
+418679 - Пишем компонент с «материальными» кнопками для Svelte
+  На сайте фреймворка есть крутая «песочница» — REPL, в которой уже есть несколько десятков примеров.
+  https://svelte.technology/repl?version=2.9.7&gist=7abb2ade3ec2358680492f4d444dd047
+-)467427 - BudgetTracker — ещё один open-source инструмент для личного учета финансов
+462003 - Как я опубликовал PWA на Svelte в Google Play
+  Шаблон svelte-template не умеет добавлять хеш к бандлу. Настраивать сборщик я не стал,
+   а сразу взял Sapper. Из коробки я получил сборку бандлов с хешем, SSR, PWA и роутинг.
+  https://fireship.io/lessons/pwa-to-play-store/ -
+
+456474 -  Tic Tac Toe, часть
+  456474 - 0: Сравнение Svelte и React -> https://github.com/nomhoi/tic-tac-toe
+  458752 - 1: Svelte и Canvas 2D - https://github.com/nomhoi/tic-tac-toe-part1
+  459630 - 2: Undo/Redo с хранением состояний https://github.com/nomhoi/tic-tac-toe-part2.git
+  459906 - 3: Undo/Redo с хранением команд https://github.com/nomhoi/tic-tac-toe-part3.git
+  460621 - 4: Взаимодействие с бэкендом на Flask с помощью HTTP -https://github.com/nomhoi/tic-tac-toe-part4.git
+   Запускаем контейнеры:
+	cd tic-tac-toe-part4
+	docker-compose up -d
+   Выполняем сборку веб-приложения:
+	cd front
+	npm install
+	npm run-script build
