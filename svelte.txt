@@ -278,7 +278,6 @@ project-setup.zip
 ----------------------------------------
 Section 06 - Diving Deeper into Components
 ----------------------------------------
-cmp-01-events.zip
 ---- cmp-01-intro.mp4
 Есть несколько задач:
 -логи про "row",
@@ -290,7 +289,6 @@ cmp-01-events.zip
 про типы компонент, некот.исп-ся для управления данными, а некот для вывода данных
 => обмен данными между крос компонентами, вложенные компоненты, парные компоненты
 
-cmp-02-spread-and-default-props.zip
 ---- cmp-03-component-communication-overview.mp4
 вложенные компоненты - типично - веобчение неск субкомпонент
     +--App--+   <--Products:[{..}] -Данные предаются вниз через props
@@ -304,11 +302,19 @@ ProductsItem<-------Click"Add2Cart"-расшарить это событие,т.
 2-54 но давайте не здесь в Product.svelte обработать, а форварднуть
 4-27 чтобы не обрабатывать событие <button on:click> , тогда оно всплывает выше.
 
-cmp-04-slot-props.zip
 ---- cmp-05-custom-events.mp4
 если не отделить события от кнопок, то между ними нет разницы
-
-cmp-05-lifecycle-hooks.zip
+0-35 попробуем анализировть event?
+0-54 добавим свое вместо on:click <Product on:add-to-card
+2-03 добавим аналогично  import Product from "./Product-6-5.svelte";
+    import {} from "svelte";  <--просто имя пакета "svelte": "^3.0.0"
+            ^---ф-цию createEventDispatcher
+2-56 const dispatch = createEventDispatcher ();  --ф-ция
+3-47 function addToCart() {
+      dispatch('add-to-cart');--имя,доп аргументы: номер продукта,текст,номер,массив,JS объект
+      }
+4-27 вернемся к App: работает
+Вы встретили свое пользовательсоке событие
 ---- cmp-06-extracting-event-data.mp4
 ---- cmp-07-spread-props-and-default-props.mp4
 ---- cmp-08-slots.mp4
@@ -319,53 +325,57 @@ cmp-05-lifecycle-hooks.zip
 ---- cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4
 ---- cmp-14-using-tick.mp4
 ---- cmp-15-wrap-up.mp4
+cmp-01-events.zip
+cmp-02-spread-and-default-props.zip
+cmp-04-slot-props.zip
+cmp-05-lifecycle-hooks.zip
 ----------------------------------------
 Section 07 - Course Project - Components Deep Dive
 ----------------------------------------
-prj-cmp-01-events.zip
 ---- prj-cmp-01-intro.mp4
-prj-cmp-02-badge-with-slot.zip
 ---- prj-cmp-02-default-props.mp4
 ---- prj-cmp-03-custom-events.mp4
-prj-cmp-03-form-in-component.zip
-prj-cmp-04-added-modal.zip
 ---- prj-cmp-04-slots.mp4
 ---- prj-cmp-05-creating-an-edit-meetup-component.mp4
-prj-cmp-05-finished.zip
 ---- prj-cmp-06-communicating-between-components.mp4
 ---- prj-cmp-07-more-slots.mp4
 ---- prj-cmp-08-adding-a-modal.mp4
 ---- prj-cmp-09-finishing-the-modal-edit-process.mp4
 ---- prj-cmp-10-wrap-up.mp4
+prj-cmp-01-events.zip
+prj-cmp-02-badge-with-slot.zip
+prj-cmp-03-form-in-component.zip
+prj-cmp-04-added-modal.zip
+prj-cmp-05-finished.zip
 ----------------------------------------
 Section 08 - Working with Bindings & Forms
 ----------------------------------------
+---- bindings-01-intro.mp4
+---- bindings-02-two-way-binding-refresher.mp4
+---- bindings-03-custom-component-bindings.mp4
+---- bindings-04-automatic-number-conversion.mp4
+---- bindings-05-checkboxes-and-radio-buttons.mp4
+---- bindings-06-binding-select-dropdowns.mp4
+---- bindings-07-binding-to-elements.mp4
+---- bindings-08-binding-to-component-references.mp4
+---- bindings-09-validation.mp4
+---- bindings-10-wrap-up.mp4
 bind-form-01-custom-component-binding.zip
 bind-form-02-group-bindings.zip
 bind-form-03-bind-select.zip
 bind-form-04-bind-this.zip
 bind-form-05-validation.zip
-bindings-01-intro.mp4
-bindings-02-two-way-binding-refresher.mp4
-bindings-03-custom-component-bindings.mp4
-bindings-04-automatic-number-conversion.mp4
-bindings-05-checkboxes-and-radio-buttons.mp4
-bindings-06-binding-select-dropdowns.mp4
-bindings-07-binding-to-elements.mp4
-bindings-08-binding-to-component-references.mp4
-bindings-09-validation.mp4
-bindings-10-wrap-up.mp4
 starting-project.zip
 ----------------------------------------
 Section 09 - Course Project - Bindings & Forms
 ----------------------------------------
-prj-bindings-01-intro.mp4
-prj-bindings-02-different-validation-solutions.mp4
-prj-bindings-03-adding-validation-output-to-textinput.mp4
-prj-bindings-04-adding-first-validation-logic.mp4
-prj-bindings-05-finishing-textinput-validation.mp4
-prj-bindings-06-overall-form-validation.mp4
-prj-bindings-07-improvements-and-wrap-up.mp4
+---- prj-bindings-01-intro.mp4
+---- prj-bindings-02-different-validation-solutions.mp4
+---- prj-bindings-03-adding-validation-output-to-textinput.mp4
+---- prj-bindings-04-adding-first-validation-logic.mp4
+---- prj-bindings-05-finishing-textinput-validation.mp4
+---- prj-bindings-06-overall-form-validation.mp4
+---- prj-bindings-07-improvements-and-wrap-up.mp4
 prj-form-01-added-validation.zip
 prj-form-02-check-touched.zip
 prj-form-03-more-input-validations.zip
@@ -374,164 +384,164 @@ prj-form-05-textarea.zip
 ----------------------------------------
 Section 10 - Managing State & Data with Stores
 ----------------------------------------
+---- stores-01-intro.mp4
+---- stores-02-understanding-the-problem.mp4
+---- stores-03-creating-a-store-and-subscribing-to-it.mp4
+---- stores-04-updating-store-data.mp4
+---- stores-05-stores-and-stateful-and-presentational-components.mp4
+---- stores-06-managing-store-subscriptions.mp4
+---- stores-07-auto-subscriptions.mp4
+---- stores-08-adding-another-store.mp4
+---- stores-09-subscribing-for-a-short-period.mp4
+---- stores-10-readable-stores.mp4
+---- stores-11-custom-stores.mp4
+---- stores-12-wrap-up.mp4
+
 starting-project.zip
 stores-01-a-basic-writable-store.zip
-stores-01-intro.mp4
 stores-02-subscribe-and-unsubscribe.zip
-stores-02-understanding-the-problem.mp4
 stores-03-auto-subscriptions.zip
-stores-03-creating-a-store-and-subscribing-to-it.mp4
 stores-04-one-time-access.zip
-stores-04-updating-store-data.mp4
 stores-05-readable-store.zip
-stores-05-stores-and-stateful-and-presentational-components.mp4
 stores-06-finished.zip
-stores-06-managing-store-subscriptions.mp4
-stores-07-auto-subscriptions.mp4
-stores-08-adding-another-store.mp4
-stores-09-subscribing-for-a-short-period.mp4
-stores-10-readable-stores.mp4
-stores-11-custom-stores.mp4
-stores-12-wrap-up.mp4
-
 ----------------------------------------
 Section 11 - Course Project - Stores
 ----------------------------------------
-prj-stores-01-intro.mp4
+---- prj-stores-01-intro.mp4
+---- prj-stores-02-setting-up-a-store.mp4
+---- prj-stores-03-custom-store-for-add-and-toggle-fav.mp4
+---- prj-stores-04-using-stores-in-different-components.mp4
+---- prj-stores-05-meetup-detail-page.mp4
+---- prj-stores-06-preparing-the-edit-form.mp4
+---- prj-stores-07-continuing-work-on-editing.mp4
+---- prj-stores-08-adding-delete-functionality.mp4
+---- prj-stores-09-adding-a-filter-switch.mp4
+---- prj-stores-10-final-steps.mp4
+---- prj-stores-11-wrap-up.mp4
 prj-stores-01-meetup-store.zip
 prj-stores-02-custom-store.zip
-prj-stores-02-setting-up-a-store.mp4
-prj-stores-03-custom-store-for-add-and-toggle-fav.mp4
 prj-stores-03-details-page.zip
 prj-stores-04-editing-meetups.zip
-prj-stores-04-using-stores-in-different-components.mp4
 prj-stores-05-deleting-meetups.zip
-prj-stores-05-meetup-detail-page.mp4
 prj-stores-06-added-filter.zip
-prj-stores-06-preparing-the-edit-form.mp4
-prj-stores-07-continuing-work-on-editing.mp4
 prj-stores-07-finished.zip
-prj-stores-08-adding-delete-functionality.mp4
-prj-stores-09-adding-a-filter-switch.mp4
-prj-stores-10-final-steps.mp4
-prj-stores-11-wrap-up.mp4
 ----------------------------------------
 Section 12 - Motion, Transitions & Animations
 ----------------------------------------
+---- transitions-01-intro.mp4
+---- transitions-02-tweened-store.mp4
+---- transitions-03-spring-store.mp4
+---- transitions-04-transition-preparation.mp4
+---- transitions-05-element-transitions.mp4
+---- transitions-06-more-on-transition.mp4
+---- transitions-07-in-and-out.mp4
+---- transitions-08-animating-passive-items.mp4
+---- transitions-09-wrap-up.mp4
 starting-project.zip
 Transitions _ Deferred transitions  Svelte Tutorial.webarchive
-transitions-01-intro.mp4
 transitions-01-tweened.zip
 transitions-02-spring.zip
-transitions-02-tweened-store.mp4
 transitions-03-prepared-setup.zip
-transitions-03-spring-store.mp4
 transitions-04-adding-transitions.zip
-transitions-04-transition-preparation.mp4
-transitions-05-element-transitions.mp4
 transitions-05-local-transitions-and-events.zip
-transitions-06-more-on-transition.mp4
 transitions-06-passive-animations.zip
-transitions-07-in-and-out.mp4
-transitions-08-animating-passive-items.mp4
-transitions-09-wrap-up.mp4
 ----------------------------------------
 Section 13 - Course Project - Transitions
 ----------------------------------------
-prj-transitions-01-intro.mp4
+---- prj-transitions-01-intro.mp4
+---- prj-transitions-02-animating-the-modal.mp4
+---- prj-transitions-03-transition-and-animate-meetup-items.mp4
+---- prj-transitions-04-animate-bade-and-wrap-up.mp4
 prj-transitions-01-transition-modal.zip
-prj-transitions-02-animating-the-modal.mp4
 prj-transitions-02-transition-list.zip
 prj-transitions-03-finished.zip
-prj-transitions-03-transition-and-animate-meetup-items.mp4
-prj-transitions-04-animate-bade-and-wrap-up.mp4
 ----------------------------------------
 ----------------------------------------
 Section 14 - Network Interaction via Http
 ----------------------------------------
-http-01-intro.mp4
+---- http-01-intro.mp4
+---- http-02-adding-a-rest-api.mp4
+---- http-03-sending-data-via-a-post-request.mp4
+---- http-04-showing-a-loading-indicator-and-sending-correct-data.mp4
+---- http-05-fetching-and-transforming-data.mp4
+---- http-06-things-to-consider.mp4
+---- http-07-using-the-await-block.mp4
+---- http-08-http-when-using-a-store.mp4
+---- http-09-wrap-up.mp4
 http-01-starting-code.zip
-http-02-adding-a-rest-api.mp4
 http-02-sending-requests.zip
 http-03-extracting-data.zip
-http-03-sending-data-via-a-post-request.mp4
-http-04-showing-a-loading-indicator-and-sending-correct-data.mp4
 http-04-using-a-loading-spinner.zip
-http-05-fetching-and-transforming-data.mp4
 http-05-the-await-block.zip
 http-06-connecting-a-store.zip
-http-06-things-to-consider.mp4
-http-07-using-the-await-block.mp4
-http-08-http-when-using-a-store.mp4
-http-09-wrap-up.mp4
 ----------------------------------------
 Section 15 - Course Project - Http
 ----------------------------------------
-prj-http-01-intro.mp4
+---- prj-http-01-intro.mp4
+---- prj-http-02-storing-meetups-via-post.mp4
+---- prj-http-03-fetching-and-transforming-data.mp4
+---- prj-http-04-adding-a-loading-spinner.mp4
+---- prj-http-05-updating-via-patch.mp4
+---- prj-http-06-favorite-and-delete.mp4
+---- prj-http-07-fixing-the-order.mp4
+---- prj-http-08-error-handling.mp4
+---- prj-http-09-wrap-up.mp4
 prj-http-01-storing-meetups.zip
 prj-http-02-loading-spinner-and-fetching.zip
-prj-http-02-storing-meetups-via-post.mp4
-prj-http-03-fetching-and-transforming-data.mp4
 prj-http-03-updating-meetups.zip
-prj-http-04-adding-a-loading-spinner.mp4
 prj-http-04-deleting-meetups.zip
 prj-http-05-finished.zip
-prj-http-05-updating-via-patch.mp4
-prj-http-06-favorite-and-delete.mp4
-prj-http-07-fixing-the-order.mp4
-prj-http-08-error-handling.mp4
-prj-http-09-wrap-up.mp4
 ----------------------------------------
 Section 16 - Special Elements
 ----------------------------------------
+---- spec-elements-01-intro.mp4
+---- spec-elements-02-dynamic-component.mp4
+---- spec-elements-03-recursive-components.mp4
+---- spec-elements-04-window-body-head.mp4
+---- spec-elements-05-context-module-scripts.mp4
 spec-elements-01-dynamic-components.zip
-spec-elements-01-intro.mp4
-spec-elements-02-dynamic-component.mp4
 spec-elements-02-recursive-components.zip
-spec-elements-03-recursive-components.mp4
 spec-elements-03-window-head-body.zip
 spec-elements-04-script-context-module.zip
-spec-elements-04-window-body-head.mp4
-spec-elements-05-context-module-scripts.mp4
 starting-project.zip
 ----------------------------------------
 Section 17 - Routing & Server-side Rendering with Sapper
 ----------------------------------------
+---- sapper-01-intro.mp4
+---- sapper-02-what-and-why.mp4
+---- sapper-03-understanding-the-folder-structure.mp4
+---- sapper-04-inspecting-the-web-page.mp4
+---- sapper-05-filenames-and-routes.mp4
+---- sapper-06-error-and-layout.mp4
+---- sapper-07-preloading-data.mp4
+---- sapper-08-how-preloading-and-data-fetching-works.mp4
+---- sapper-09-moving-meetup-files-into-the-sapper-project.mp4
+---- sapper-10-fetching-data-on-the-client-side.mp4
+---- sapper-11-prefetching-data-on-the-server.mp4
+---- sapper-12-syncing-fetched-data-and-store.mp4
+---- sapper-13-editing-and-deleting.mp4
+---- sapper-14-rendering-the-meetup-detail-page.mp4
+---- sapper-15-adding-global-css.mp4
+---- sapper-16-wrap-up.mp4
 project-setup.zip
 sapper-01-first-steps.zip
-sapper-01-intro.mp4
 sapper-02-finished-first-walkthrough.zip
-sapper-02-what-and-why.mp4
 sapper-03-meetups-client-side-fetching.zip
-sapper-03-understanding-the-folder-structure.mp4
-sapper-04-inspecting-the-web-page.mp4
 sapper-04-prefetching.zip
 sapper-05-adding-a-store.zip
-sapper-05-filenames-and-routes.mp4
 sapper-06-added-editing-and-deleting.zip
-sapper-06-error-and-layout.mp4
 sapper-07-finished.zip
-sapper-07-preloading-data.mp4
-sapper-08-how-preloading-and-data-fetching-works.mp4
-sapper-09-moving-meetup-files-into-the-sapper-project.mp4
-sapper-10-fetching-data-on-the-client-side.mp4
-sapper-11-prefetching-data-on-the-server.mp4
-sapper-12-syncing-fetched-data-and-store.mp4
-sapper-13-editing-and-deleting.mp4
-sapper-14-rendering-the-meetup-detail-page.mp4
-sapper-15-adding-global-css.mp4
-sapper-16-wrap-up.mp4
 ----------------------------------------
 Section 18 - Deployment
 ----------------------------------------
+---- deployment-01-intro.mp4
+---- deployment-02-app-types-and-deployment-options.mp4
+---- deployment-03-building-the-app.mp4
+---- deployment-04-rendering-content-correctly-on-the-server.mp4
+---- deployment-05-deploying-a-ssr-app.mp4
+---- deployment-06-hosting-a-static-site.mp4
+---- deployment-07-wrap-up.mp4
 deployment-01-finished.zip
-deployment-01-intro.mp4
-deployment-02-app-types-and-deployment-options.mp4
-deployment-03-building-the-app.mp4
-deployment-04-rendering-content-correctly-on-the-server.mp4
-deployment-05-deploying-a-ssr-app.mp4
-deployment-06-hosting-a-static-site.mp4
-deployment-07-wrap-up.mp4
 ----------------------------------------
 Section 19 - Course Roundup
 ----------------------------------------
