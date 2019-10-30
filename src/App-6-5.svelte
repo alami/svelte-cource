@@ -5,7 +5,7 @@
      let closeable = false;
      let products = [
          {
-             id: "p1",
+//             id: "p1",
              title:"A Book",
              price:9.99
          }
@@ -35,6 +35,6 @@
     let: didAgreed={closeable}>
     <h1 slot="header">head</h1>
     <h1>WWW</h1>
-    <button slot="footer" on:click = "{()=>(showModal=false)}" disabled={!closeable}>Confirm</button>
+    <button slot="footer" on:click = "{()=>(showModal=false)}" disabled={closeable}>Confirm</button>
 </Modal>
 {/if}

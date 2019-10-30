@@ -330,7 +330,7 @@ Prod:function deleteProduct(event) { console.log(event.detail); }
 ---- cmp-08-slots.mp4
 слот - это плейсхолдер
 <model> компонент  - фрейм, часто, напр регистарация, ворнинг ссообщение
-3-00 demo {$html ...} --код в Model.svelte и в App html-строка
+3-00 demo {$html ...} --код в Model.svelte и в App html-стро ка
 4-43 но лучше разместить целый мнострочник <Model>  ..  </Model> => undefened
 5-12   => <slot />  вместо {$html ...}
 ---- cmp-09-named-and-default-slots.mp4
@@ -350,10 +350,21 @@ Prod:function deleteProduct(event) { console.log(event.detail); }
 
 ---- cmp-11-slot-props.mp4
 как контролировать - slot-props - очень полезная вещь
-
+ERROR
 ---- cmp-12-component-lifecycle-theory.mp4
+-создание
+ -скрипт запускает-работа по основной инициализации (переменные, ф-ции)
+ -onMount()       -более сложная инициализационная работа (напр, запрос данных)
+ -onDestroy ()    -cleanup work
+-обновления
+ -beforeUpdate()- сохранить (DOM) состояние перед тем как Svelte обновит его
+ -afterUpdate()- вручную обновляет DOM/просматривает после...
+ -tick() - тех.вещь, ожидание когда ..
 ---- cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4
+посмотрим эти циклы
 ---- cmp-14-using-tick.mp4
+
+
 ---- cmp-15-wrap-up.mp4
 cmp-01-events.zip
 cmp-02-spread-and-default-props.zip
