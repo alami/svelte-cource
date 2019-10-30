@@ -231,14 +231,48 @@ prj-basics-05-finished.zip
   примеры - Modal, Card, Button
   множество
 
-
-
-
 ---- prj-basics-07-passing-data-into-components.mp4
 ---- prj-basics-08-adding-a-meetupgrid-component.mp4
 ---- prj-basics-09-adding-meetups-via-a-form.mp4
+Добавляем 1) без action,  2)в ней текстовый поля ввода
+2-53 3)кнопку 4) <form on:click|preventDefault  = "{addMeetup}" >
+4-39 5)переменные для сохарнения полей формы ввода
+5-06 6)bind-им поля с переменными
+6-28 7)завершаем содание ф-ции addMeetup()
+7-26 8)в кототрой пушим в массив, но как помним это не есть ТРИГГЕР измения т.е. неработает
+7-59 9)через '=', т.е все  ардейтится
+8-24 демо
+8-51 проблема:  'const' не может сохранить -> передлать в 'let'
+9-24 ok
+
 ---- prj-basics-10-creating-a-textinput-component.mp4
+Для стилизации превратим поле ввода  в комонент 'TextInput' src/UI/TextInput.svelte
+2-07 но тк. 2 вида полей, <#if>
+3-37 добавим экспортные ппеременные и id, label
+4-07 bind:value="" --как сделать кроскомпонентной
+5-35 value={value} on:input --обработку события
+5-46 <style>
+6-06 добавим в src/App.svelte
+7-10 <TextInput id="title"  label="Title"  type="text"  value={title}
+   on:input={event => (title = event.target.value)} /> --короткий синтаксис стрелочной фции
+8-01 аналогично для всех полей  src/App.svelte
+8-05 коорестируем другой тип поля email , т.е. вводим  export let type;
+10-24 стили, тест
+10-26 чтбы авто не удалялось <form on:click|preventDefault
+11-08 ок
+
 ---- prj-basics-11-added-custom-button-component.mp4
+компонета кнопки
+0-44 добыим
+1-43 в App   import Button from './UI/Button.svelte';
+1-55     <Button type="submit" caption="Save" />
+2-42 и в src/Meetups/MeetupItem.svelte
+  import Button from "../UI/Button.svelte";
+      <Button mode="outline" type="button" caption="Favorite" />
+      <Button type="button" caption="Show Details" />
+3-12  <Button href="mailto:{email}" caption="Contact" />--тоже для почты
+3-52 сделав #if в src/UI/Button.svelte
+4-31 добавим mode="outline"
 ---- prj-basics-12-wrap-up.mp4
 project-setup.zip
 ----------------------------------------

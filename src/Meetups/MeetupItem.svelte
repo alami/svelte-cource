@@ -1,10 +1,12 @@
 <script>
-    export let title;
-    export let subtitle;
-    export let imageUrl;
-    export let description;
-    export let address;
-    export let email; 
+  import Button from "../UI/Button.svelte";
+
+  export let title;
+  export let subtitle;
+  export let imageUrl;
+  export let description;
+  export let address;
+  export let email;
 </script>
 
 <style>
@@ -59,6 +61,10 @@
   div {
     text-align: right;
   }
+
+  .content {
+    height: 4rem;
+  }
 </style>
 
 <article>
@@ -68,14 +74,14 @@
     <p>{address}</p>
   </header>
   <div class="image">
-    <img src="{imageUrl}" alt="{title}" />
+    <img src={imageUrl} alt={title} />
   </div>
   <div class="content">
     <p>{description}</p>
   </div>
   <footer>
-    <a href="mailto:{email}">Contact</a>
-    <button>Show Details</button>
-    <button>Favorite</button>
-  </footer> 
+    <Button href="mailto:{email}" caption="Contact" />
+    <Button mode="outline" type="button" caption="Favorite" />
+    <Button type="button" caption="Show Details" />
+  </footer>
 </article> 
