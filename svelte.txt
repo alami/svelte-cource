@@ -528,7 +528,18 @@ Firebase
 
 
 ---- http-04-showing-a-loading-indicator-and-sending-correct-data.mp4
+Loading...
 ---- http-05-fetching-and-transforming-data.mp4
+  fetch("https://svelte-course.firebaseio.com/hobbies.json")
+    .then(res => {
+        if (!res.ok) { throw new Error("Failed!"); }
+        return res.json();   })
+    .then(data => {
+        hobbies = Object.values(data);
+        let keys = Object.keys(data);
+        console.log(keys);
+        for (const key in data) { console.log(key, data[key]); })
+    .catch(err => { console.log(err);  });
 ---- http-06-things-to-consider.mp4
 ---- http-07-using-the-await-block.mp4
 ---- http-08-http-when-using-a-store.mp4

@@ -3,6 +3,26 @@
     let hobbyInput;
     let isLoading = false;
 
+    fetch("https://svelte-course.firebaseio.com/hobbies.json")
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error("Failed!");
+                }
+                return res.json();
+            })
+            .then(data => {
+                hobbies = Object.values(data);
+                let keys = Object.keys(data);
+                console.log(keys);
+
+                for (const key in data) {
+                    console.log(key, data[key]);
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
+
     function addHobby() {
         hobbies = [...hobbies, hobbyInput.value];
 
@@ -17,7 +37,7 @@
                 .then(res => {
                     isLoading = false;
                     if (!res.ok) {
-                        throw new Error("Failed! 404 -Not found.");
+                        throw new Error("Failed!");
                     }
                     // ...
                     alert("Saved Data!");
