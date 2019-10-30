@@ -1,4 +1,7 @@
-﻿=====================================
+﻿https://medium.com/codingthesmartway-com-blog/building-a-svelte-3-todo-app-from-start-to-deployment-1737f72c23a6
+https://medium.com/codingthesmartway-com-blog/the-svelte-3-quickstart-tutorial-8f05696050b3
+
+=====================================
 Section 01 - Getting Started
 ---- getting-started-01-introduction.mp4
 
@@ -361,8 +364,22 @@ ERROR
  -afterUpdate()- вручную обновляет DOM/просматривает после...
  -tick() - тех.вещь, ожидание когда ..
 ---- cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4
-посмотрим эти циклы
+посмотрим эти циклы. В src/Modal.svelte добавим:
+  import {createEventDispatcher, onMount, onDestroy, beforeUpdate, afterUpdate} from 'svelte';
+    onMount(()=>{console.log('onMount')})
+    onDestroy(()=>{console.log('onDestroy')})
+    beforeUpdate(()=>{console.log('beforeUpdate');autoscroll=agreed;})
+    afterUpdate(()=>{console.log('afterUpdate'); if (autoscroll) {
+        const modal = document.querySelector('.modal');
+        modal.scrollTo(0,modal.scrollHeight);
+        }
+    })
+    console.log('Script execute!');
 ---- cmp-14-using-tick.mp4
+В src/App.svelte добавим:
+    import {tick} from 'svelte';
+----------- Keyboard key Pressed/JavaScript Key Code value ----------
+    tab	/ 9 | enter / 13 | shift /	16 | ctrl /	17 | Ещё 97 строк
 
 
 ---- cmp-15-wrap-up.mp4
