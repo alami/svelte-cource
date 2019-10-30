@@ -518,8 +518,15 @@ prj-transitions-03-finished.zip
 Section 14 - Network Interaction via Http
 ----------------------------------------
 ---- http-01-intro.mp4
+API , json
 ---- http-02-adding-a-rest-api.mp4
+Firebase
 ---- http-03-sending-data-via-a-post-request.mp4
+2-00 fetch() - ф-ция JS, а не Svelte
+3-31 https://svelte-course.firebaseio.com/hobbies.json - json требования Firebase, а не JS|Svelte
+для др.API это может и не  надо
+
+
 ---- http-04-showing-a-loading-indicator-and-sending-correct-data.mp4
 ---- http-05-fetching-and-transforming-data.mp4
 ---- http-06-things-to-consider.mp4
