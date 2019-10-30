@@ -19,7 +19,6 @@
 <Product
         on:add-to-cart="{addToCart}"
         on:delete="{deleteProduct}"
-        title=product.title
-        price={product.price}
+        {...product}
 />
-{/each}}
+{/each}
