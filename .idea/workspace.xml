@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2064fe40-8edb-475f-8996-35788078fef7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte.txt" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,9 @@
       <workItem from="1572307290093" duration="81000" />
       <workItem from="1572307382393" duration="848000" />
       <workItem from="1572312938783" duration="1038000" />
-      <workItem from="1572364612048" duration="1976000" />
+      <workItem from="1572364612048" duration="2124000" />
+      <workItem from="1572408790212" duration="117000" />
+      <workItem from="1572408940198" duration="429000" />
     </task>
     <servers />
   </component>
