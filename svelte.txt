@@ -349,6 +349,8 @@ Prod:function deleteProduct(event) { console.log(event.detail); }
  <Modal on:cancel="{()=>showModal=false}" on:close="{()=>showModal=false}" >
 
 ---- cmp-11-slot-props.mp4
+как контролировать - slot-props - очень полезная вещь
+
 ---- cmp-12-component-lifecycle-theory.mp4
 ---- cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4
 ---- cmp-14-using-tick.mp4
