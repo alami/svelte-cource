@@ -1,4 +1,5 @@
 <script>
+    import Model from "./Modal.svelte";
      import Product from "./Product-6-5.svelte";
      let products = [
          {
@@ -14,6 +15,8 @@
          console.log(event.detail);
      }
 </script>
+
+
 <h1>App-6-5</h1>
 {#each products as product}
 <Product
@@ -22,3 +25,7 @@
         {...product}
 />
 {/each}
+
+<Model>
+    <h1>WWW</h1>
+</Model>

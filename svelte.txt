@@ -328,6 +328,13 @@ Prod:function deleteProduct(event) { console.log(event.detail); }
 5-57 условный prop если нет, то вставить defalt /6-23/ -> ok
 
 ---- cmp-08-slots.mp4
+слот - это плейсхолдер
+<model> компонент  - фрейм, часто, напр регистарация, ворнинг ссообщение
+3-00 demo {$html ...} --код в Model.svelte и в App html-строка
+4-43 но лучше разместить целый мнострочник <Model>  ..  </Model> => undefened
+5-12   => <slot />  вместо {$html ...}
+
+
 ---- cmp-09-named-and-default-slots.mp4
 ---- cmp-10-opening-and-closing-a-modal.mp4
 ---- cmp-11-slot-props.mp4
