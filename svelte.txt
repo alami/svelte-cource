@@ -334,8 +334,20 @@ Prod:function deleteProduct(event) { console.log(event.detail); }
 4-43 но лучше разместить целый мнострочник <Model>  ..  </Model> => undefened
 5-12   => <slot />  вместо {$html ...}
 ---- cmp-09-named-and-default-slots.mp4
-
 ---- cmp-10-opening-and-closing-a-modal.mp4
+0-0 открытие через переменую и стрелочную ф-цию и {#if} в src/Modal.svelte
+     let showModal = false;
+    <button on:click = "{()=>showModal=true}">Show Modal</button>
+    {#if showModal}
+    <Modal>....
+1-29 закрытие - создаем свое событие для кнопки в src/Modal.svelte
+    import {createEventDispatcher} from 'svelte';
+    const dispatch  = createEventDispatcher;
+<div class="backdrop" on:click = "{()=>dispatch('cancel')}" /> ---2 события
+            <button on:click = "{()=>dispatch('close')}">Close</button>
+2-21 и принять в src/App-6-5.svelte
+ <Modal on:cancel="{()=>showModal=false}" on:close="{()=>showModal=false}" >
+
 ---- cmp-11-slot-props.mp4
 ---- cmp-12-component-lifecycle-theory.mp4
 ---- cmp-13-creation-and-update-lifecycle-hooks-in-action.mp4

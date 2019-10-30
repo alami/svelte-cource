@@ -1,5 +1,6 @@
 <script>
-    export let content;
+    import {createEventDispatcher} from 'svelte';
+    const dispatch  = createEventDispatcher;
 </script>
 <style>
     .backdrop {
@@ -30,7 +31,7 @@
         border-bottom: 1px solid #ccc;
     }
 </style>
-<div class="backdrop" />
+<div class="backdrop" on:click = "{()=>dispatch('cancel')}" />
 <div class="modal">
     <header>
         <slot name ="header"/>
@@ -40,7 +41,7 @@
     </div>
     <footer>
         <slot name="footer">
-            <button>Save</button>
+            <button on:click = "{()=>dispatch('close')}">Close</button>
         </slot>
     </footer>
 </div>
