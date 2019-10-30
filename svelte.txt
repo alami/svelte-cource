@@ -302,13 +302,12 @@ ProductsItem<-------Click"Add2Cart"-расшарить это событие,т.
 вернемся к простейшему "helloWorld", изменим, добавим Product.svelte - кнопки
 2-10 ничего непроисходит - нужно форвардить событие -обычно добавить обработчик{".."}
 2-54 но давайте не здесь в Product.svelte обработать, а форварднуть
-
-
-
-
+4-27 чтобы не обрабатывать событие <button on:click> , тогда оно всплывает выше.
 
 cmp-04-slot-props.zip
 ---- cmp-05-custom-events.mp4
+если не отделить события от кнопок, то между ними нет разницы
+
 cmp-05-lifecycle-hooks.zip
 ---- cmp-06-extracting-event-data.mp4
 ---- cmp-07-spread-props-and-default-props.mp4
