@@ -4,7 +4,7 @@
          console.log(event);
      }
      function deleteProduct(event) {
-         console.log(event);
+         console.log(event.detail);
      }
 </script>
 <h1>App-6-5</h1>
