@@ -258,7 +258,7 @@ prj-basics-05-finished.zip
 8-01 аналогично для всех полей  src/App.svelte
 8-05 коорестируем другой тип поля email , т.е. вводим  export let type;
 10-24 стили, тест
-10-26 чтбы авто не удалялось <form on:click|preventDefault
+10-26 чтобы авто не удалялось <form on:click|preventDefault
 11-08 ок
 
 ---- prj-basics-11-added-custom-button-component.mp4
@@ -280,10 +280,33 @@ Section 06 - Diving Deeper into Components
 ----------------------------------------
 cmp-01-events.zip
 ---- cmp-01-intro.mp4
+Есть несколько задач:
+-логи про "row",
+-как организовать пользовательские события для "ShowDetails" итп
+-и "пропагейт" инфу для компонента
+-и дествительно тесного обмена инфой между компонентами
 ---- cmp-02-component-types.mp4
+вспомним слайд из ---- prj-basics-06-different-component-types.mp4
+про типы компонент, некот.исп-ся для управления данными, а некот для вывода данных
+=> обмен данными между крос компонентами, вложенные компоненты, парные компоненты
+
 cmp-02-spread-and-default-props.zip
 ---- cmp-03-component-communication-overview.mp4
+вложенные компоненты - типично - веобчение неск субкомпонент
+    +--App--+   <--Products:[{..}] -Данные предаются вниз через props
+Products    Card   <---
+ProductsItem<-------Click"Add2Cart"-расшарить это событие,т.е.поднять событие "add"
+2-20 но  этого события нет в браузере
+
 ---- cmp-04-event-forwarding.mp4
+вернемся к простейшему "helloWorld", изменим, добавим Product.svelte - кнопки
+2-10 ничего непроисходит - нужно форвардить событие -обычно добавить обработчик{".."}
+2-54 но давайте не здесь в Product.svelte обработать, а форварднуть
+
+
+
+
+
 cmp-04-slot-props.zip
 ---- cmp-05-custom-events.mp4
 cmp-05-lifecycle-hooks.zip
