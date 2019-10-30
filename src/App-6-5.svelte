@@ -27,5 +27,7 @@
 {/each}
 
 <Model>
+    <h1 slot="header">head</h1>
     <h1>WWW</h1>
+    <button slot="footer">Close</button>
 </Model>

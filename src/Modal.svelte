@@ -32,5 +32,15 @@
 </style>
 <div class="backdrop" />
 <div class="modal">
-    <slot />
+    <header>
+        <slot name ="header"/>
+    </header>
+    <div class="content">
+        <slot />
+    </div>
+    <footer>
+        <slot name="footer">
+            <button>Save</button>
+        </slot>
+    </footer>
 </div>

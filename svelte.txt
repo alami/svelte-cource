@@ -333,9 +333,8 @@ Prod:function deleteProduct(event) { console.log(event.detail); }
 3-00 demo {$html ...} --код в Model.svelte и в App html-строка
 4-43 но лучше разместить целый мнострочник <Model>  ..  </Model> => undefened
 5-12   => <slot />  вместо {$html ...}
-
-
 ---- cmp-09-named-and-default-slots.mp4
+
 ---- cmp-10-opening-and-closing-a-modal.mp4
 ---- cmp-11-slot-props.mp4
 ---- cmp-12-component-lifecycle-theory.mp4
