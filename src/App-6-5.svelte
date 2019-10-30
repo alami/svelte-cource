@@ -3,5 +3,5 @@
 
 </script>
 <h1>App-6-5</h1>
-<Product
+<Product on:click="{()=>alert('Clicked!')}"
         productTitle="A Book" />
