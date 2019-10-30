@@ -316,7 +316,13 @@ ProductsItem<-------Click"Add2Cart"-расшарить это событие,т.
 4-27 вернемся к App: работает
 Вы встретили свое пользовательсоке событие
 ---- cmp-06-extracting-event-data.mp4
+App:import {createEventDispatcher} from "svelte";
+    const dispatch = createEventDispatcher ();
+    function addToCart() { dispatch('add-to-cart', {id:'p1'});  }
+Prod:function deleteProduct(event) { console.log(event.detail); }
 ---- cmp-07-spread-props-and-default-props.mp4
+как компоненты взаимодействуют, передают props
+1-45 price={9.99} --{} - только числовое
 ---- cmp-08-slots.mp4
 ---- cmp-09-named-and-default-slots.mp4
 ---- cmp-10-opening-and-closing-a-modal.mp4
