@@ -554,19 +554,8 @@ http-06-connecting-a-store.zip
 Section 15 - Course Project - Http
 ----------------------------------------
 ---- prj-http-01-intro.mp4
-Routing & Servere Side Rendering
 ---- prj-http-02-storing-meetups-via-post.mp4
-Зачем?
-Routing (Multiple Pages)
- -даже SPA это нужно URL-ы
- -проецирует компоненты на URL-ы
-Servere Side Rendering
- -ускоряет рендеринг, улучшает SEO
- -пререндеринг компонент
-Что это?  Свелт приложение и комоненты
 ---- prj-http-03-fetching-and-transforming-data.mp4
-src-components
-   -routes
 ---- prj-http-04-adding-a-loading-spinner.mp4
 ---- prj-http-05-updating-via-patch.mp4
 ---- prj-http-06-favorite-and-delete.mp4
@@ -595,19 +584,73 @@ starting-project.zip
 Section 17 - Routing & Server-side Rendering with Sapper
 ----------------------------------------
 ---- sapper-01-intro.mp4
+Routing & Servere Side Rendering
 ---- sapper-02-what-and-why.mp4
+Зачем?
+Routing (Multiple Pages)
+ -даже SPA это нужно URL-ы
+ -проецирует компоненты на URL-ы
+Servere Side Rendering
+ -ускоряет рендеринг, улучшает SEO
+ -пререндеринг компонент
+Что это?  Свелт приложение и комоненты
+
 ---- sapper-03-understanding-the-folder-structure.mp4
+src/components
+   -routes
+1-47 client.js - пререндеринг страницы
+   server.js - node.js стр-цы запускающая sapper.middleware({...})
+2-06 service-worker.js - поможет в оффлфн кешинг, итп
+  template.html -
 ---- sapper-04-inspecting-the-web-page.mp4
+npm install -> опять dev скрипт -> localhost:3000
+1-38 пререндеринг на сервере,
+2-12 это означает что есть 2 разл фолдера
+components
+routes
 ---- sapper-05-filenames-and-routes.mp4
+src/components =- не для отдельных стр-ц
+   -routes
+2-23 about.svelte = adnout/index.svelte
+3-02 preload некоторых данных, рендринг "постов" и компонент
+4-22 [slug].svelte - если стр-ца не найдена, подстав ется динамические параметры
 ---- sapper-06-error-and-layout.mp4
+/_layout.svelte
+  <Nav {segment} />
+  <main >
+    <slot />
+  </main>
+1-34 аналогично /error.svelte
 ---- sapper-07-preloading-data.mp4
+возвращает Промис с постом и вставляется в скрипт
+в спец скрипт module
 ---- sapper-08-how-preloading-and-data-fetching-works.mp4
 ---- sapper-09-moving-meetup-files-into-the-sapper-project.mp4
+2-08 удаляем в /index.svelte <style>., весь html, кроме <svelte:head>...
+2-16 и в /_layout.svelte
+ удаляем Nav.svelte
+3-06 UI/* копируем в src/components
+3-45 Meetup*.svelte итп в src/routers
+3-56 часть Meetup*.svelte в  src/components/Meetup образованный каталог
+4-55 App.svelte <style> в /_layout.svelte
 ---- sapper-10-fetching-data-on-the-client-side.mp4
+MeetupGrid.svelte переименуем в /index.svelte
+1-00 почистим, добавим из App.svelte итп
+4-00 отладка загрузки модулей
+6-00 демо, отладка /index.svelte
+Это клиентская сторона !
+
 ---- sapper-11-prefetching-data-on-the-server.mp4
+перенесем загрузки в спец скрите "module"
 ---- sapper-12-syncing-fetched-data-and-store.mp4
+не работают события итп
 ---- sapper-13-editing-and-deleting.mp4
+проверяем
 ---- sapper-14-rendering-the-meetup-detail-page.mp4
+переименуем /MeetupDetails.svelte в [id].svelte
+1-30  загрузки в спец скрите "module"
+4-54 проблема загрузки из бд,
+смена кнопок на href
 ---- sapper-15-adding-global-css.mp4
 ---- sapper-16-wrap-up.mp4
 project-setup.zip
@@ -623,10 +666,17 @@ Section 18 - Deployment
 ----------------------------------------
 ---- deployment-01-intro.mp4
 ---- deployment-02-app-types-and-deployment-options.mp4
+SSR Static Встроенные/Виджет-стиль
 ---- deployment-03-building-the-app.mp4
+1-34 npm run build --->bundle.js
+3-41 node index.js
+4-04 npm run export ---> __sapper_
 ---- deployment-04-rendering-content-correctly-on-the-server.mp4
 ---- deployment-05-deploying-a-ssr-app.mp4
+on AWS all __sapper_
 ---- deployment-06-hosting-a-static-site.mp4
+npm run export
+on Amazon +S3
 ---- deployment-07-wrap-up.mp4
 deployment-01-finished.zip
 ----------------------------------------
