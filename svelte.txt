@@ -554,8 +554,19 @@ http-06-connecting-a-store.zip
 Section 15 - Course Project - Http
 ----------------------------------------
 ---- prj-http-01-intro.mp4
+Routing & Servere Side Rendering
 ---- prj-http-02-storing-meetups-via-post.mp4
+Зачем?
+Routing (Multiple Pages)
+ -даже SPA это нужно URL-ы
+ -проецирует компоненты на URL-ы
+Servere Side Rendering
+ -ускоряет рендеринг, улучшает SEO
+ -пререндеринг компонент
+Что это?  Свелт приложение и комоненты
 ---- prj-http-03-fetching-and-transforming-data.mp4
+src-components
+   -routes
 ---- prj-http-04-adding-a-loading-spinner.mp4
 ---- prj-http-05-updating-via-patch.mp4
 ---- prj-http-06-favorite-and-delete.mp4
