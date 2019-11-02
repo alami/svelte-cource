@@ -392,6 +392,7 @@ Section 07 - Course Project - Components Deep Dive
 ----------------------------------------
 ---- prj-cmp-01-intro.mp4
 ---- prj-cmp-02-default-props.mp4
+добавить props->убрать warnings
 ---- prj-cmp-03-custom-events.mp4
 ---- prj-cmp-04-slots.mp4
 ---- prj-cmp-05-creating-an-edit-meetup-component.mp4
