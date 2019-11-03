@@ -412,6 +412,8 @@ function addMeetup(event) { ----т.к. надо передвать данные
           id: Math.random().toString(),  =>  title: event.detail.title,
           title: event.title,                subtitle: event.detail.subtitle,
 ---- prj-cmp-07-more-slots.mp4
+в src/UI/Button.svelte вместо {caption} исп-ть  <slot/>
+   => поменяться во всех кнопках
 ---- prj-cmp-08-adding-a-modal.mp4
 ---- prj-cmp-09-finishing-the-modal-edit-process.mp4
 ---- prj-cmp-10-wrap-up.mp4
