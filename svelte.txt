@@ -394,6 +394,13 @@ Section 07 - Course Project - Components Deep Dive
 ---- prj-cmp-02-default-props.mp4
 добавить props->убрать warnings
 ---- prj-cmp-03-custom-events.mp4
+custom-events-meetupDetails
+3-25 togglefavorite по аналогии mouseleave, а не CAMEL или др.нотация
+4-49 но какой meetup был нажат для togglefavorite - но каждый имеет id
+
+
+
+
 ---- prj-cmp-04-slots.mp4
 ---- prj-cmp-05-creating-an-edit-meetup-component.mp4
 ---- prj-cmp-06-communicating-between-components.mp4
