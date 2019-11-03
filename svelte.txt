@@ -415,6 +415,15 @@ function addMeetup(event) { ----т.к. надо передвать данные
 в src/UI/Button.svelte вместо {caption} исп-ть  <slot/>
    => поменяться во всех кнопках
 ---- prj-cmp-08-adding-a-modal.mp4
+создание src/UI/Model.svelte и вставка в src/Meetups/EditMeetup.svelte
+6-00 сделать событие в модально окне
+            <Button on:click={closeModal}>Close</Button>
+        <div class="modal-backdrop" on:click={closeModal} /> --через его обертку
+через src/Meetups/EditMeetup.svelte
+        <Modal title="Edit Meetup Data" on:cancel>
+в src/App.svelte
+
+
 ---- prj-cmp-09-finishing-the-modal-edit-process.mp4
 ---- prj-cmp-10-wrap-up.mp4
 prj-cmp-01-events.zip

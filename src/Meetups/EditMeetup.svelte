@@ -1,7 +1,8 @@
 <script>
-  import { createEventDispatcher } from "svelte";
+  import {createEventDispatcher} from "svelte";
   import TextInput from "../UI/TextInput.svelte";
   import Button from "../UI/Button.svelte";
+  import Modal from "../UI/Modal.svelte";
 
   let title = "";
   let subtitle = "";
@@ -31,7 +32,7 @@
     margin: auto;
   }
 </style>
-
+<Modal title="Edit Meetup Data" on:cancel>
 <form on:submit|preventDefault={submitForm}>
   <TextInput
     id="title"
@@ -65,5 +66,6 @@
     controlType="textarea"
     value={description}
     on:input={event => (description = event.target.value)} />
-  <Button type="submit" >Save</Button>
+<!--  <Button type="submit" >Save</Button>-->
 </form>
+</Modal>
