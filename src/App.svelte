@@ -3,7 +3,6 @@
   import MeetupGrid from "./Meetups/MeetupGrid.svelte";
   import TextInput from "./UI/TextInput.svelte";
   import Button from "./UI/Button.svelte";
-  import Modal from "./UI/Modal.svelte";
   import EditMeetup from "./Meetups/EditMeetup.svelte";
 
   let meetups = [
@@ -76,6 +75,7 @@
         <Button on:click="{()=> editMode = 'add'}">New Meetup</Button>
     </div>
     {#if editMode === 'add'}
+        <EditMeetup on:save={addMeetup} on:cancel={cancelEdit} />
         <EditMeetup on:save={addMeetup} on:cancel={cancelEdit} />
     {/if}
     <MeetupGrid {meetups} on:togglefavorite={toggleFavorite} />

@@ -422,9 +422,11 @@ function addMeetup(event) { ----т.к. надо передвать данные
 через src/Meetups/EditMeetup.svelte
         <Modal title="Edit Meetup Data" on:cancel>
 в src/App.svelte
-
-
 ---- prj-cmp-09-finishing-the-modal-edit-process.mp4
+1-00   <Button type="submit" >Save</Button>
+     </form> --не будет работать в форме, вынести за форму и
+
+
 ---- prj-cmp-10-wrap-up.mp4
 prj-cmp-01-events.zip
 prj-cmp-02-badge-with-slot.zip
