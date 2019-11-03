@@ -444,10 +444,12 @@ Section 08 - Working with Bindings & Forms --Handling User Input
 </script>
 <!--<input type="text" value={val}   on:input={setValue}>-->
     <input type="text" value={val} bind:value={val}>
-
-
-    
 ---- bindings-03-custom-component-bindings.mp4
+    <input type="{type}" bind:value={val}>
+ValidationError: 'type' attribute cannot be dynamic if input uses two-way binding
+
+
+
 ---- bindings-04-automatic-number-conversion.mp4
 ---- bindings-05-checkboxes-and-radio-buttons.mp4
 ---- bindings-06-binding-select-dropdowns.mp4
