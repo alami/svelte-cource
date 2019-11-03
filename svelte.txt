@@ -447,11 +447,15 @@ Section 08 - Working with Bindings & Forms --Handling User Input
 ---- bindings-03-custom-component-bindings.mp4
     <input type="{type}" bind:value={val}>
 ValidationError: 'type' attribute cannot be dynamic if input uses two-way binding
-
-
-
 ---- bindings-04-automatic-number-conversion.mp4
 ---- bindings-05-checkboxes-and-radio-buttons.mp4
+вместо value - названия переменной использовать checked !!!!
+    <input type="checkbox" bind:checked={agreed}>
+radio будет 1 знгачение
+    <input type="radio" name="color" value="red" bind:group={favcolor}>RED
+    <input type="radio" name="color" value="green" bind:group={favcolor}>GREEN
+    <input type="radio" name="color" value="blue" bind:group={favcolor}>Blu
+checkbox - массив !!!
 ---- bindings-06-binding-select-dropdowns.mp4
 ---- bindings-07-binding-to-elements.mp4
 ---- bindings-08-binding-to-component-references.mp4
