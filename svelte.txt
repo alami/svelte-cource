@@ -406,6 +406,11 @@ custom-events-meetupDetails
     <form on:submit|preventDefault={submitForm}>
 5-24 перместиь стиль формы из src/Meetups/MeetupGrid.svelte в src/Meetups/EditMeetup.svelte
 ---- prj-cmp-06-communicating-between-components.mp4
+1-37 function addMeetup() {  =>
+function addMeetup(event) { ----т.к. надо передвать данные
+      const newMeetup = {
+          id: Math.random().toString(),  =>  title: event.detail.title,
+          title: event.title,                subtitle: event.detail.subtitle,
 ---- prj-cmp-07-more-slots.mp4
 ---- prj-cmp-08-adding-a-modal.mp4
 ---- prj-cmp-09-finishing-the-modal-edit-process.mp4
