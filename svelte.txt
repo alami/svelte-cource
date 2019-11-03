@@ -2,9 +2,8 @@
 https://medium.com/codingthesmartway-com-blog/the-svelte-3-quickstart-tutorial-8f05696050b3
 
 =====================================
-Section 01 - Getting Started
+Section 01 - Getting Started --First Steps
 ---- getting-started-01-introduction.mp4
-
 ---- getting-started-02-why-svelte.mp4
 0-00-19  веб 10 лет назад
 0-01-26 современный веб прил: на сервере - DB, аутент,тяж.подъем, APIs
@@ -113,7 +112,7 @@ multiple-components- это строительные блоки UI как и Ang
 contact-card-with-style.zip
 label - JavaScript _ MDN.webarchive
 ----------------------------------------
-Section 03 - Working with Conditional & Loops
+Section 03 - Working with Conditional & Loops --Beyond Simple Input & Output
 ----------------------------------------
 assignment-solution.zip
 assignment-start.zip
@@ -168,7 +167,7 @@ function deleteLast() { createdContacts = createdContacts.slice(0,-1);  }
 ---- cond-loops-10-wrap-up.mp4
 project-setup.zip
 ----------------------------------------
-Section 04 - A Closer Look at Reactivity
+Section 04 - A Closer Look at Reactivity - Beyond the Basic
 ----------------------------------------
 Introduction to events - Learn web development _ MDN.webarchive
 more-on-reactivity-01-finished.zip
@@ -279,7 +278,7 @@ prj-basics-05-finished.zip
 ---- prj-basics-12-wrap-up.mp4
 project-setup.zip
 ----------------------------------------
-Section 06 - Diving Deeper into Components
+Section 06 - Diving Deeper into Components - Multiple Components and More
 ----------------------------------------
 ---- cmp-01-intro.mp4
 Есть несколько задач:
@@ -388,7 +387,7 @@ cmp-02-spread-and-default-props.zip
 cmp-04-slot-props.zip
 cmp-05-lifecycle-hooks.zip
 ----------------------------------------
-Section 07 - Course Project - Components Deep Dive
+Section 07 - Course Project - Components Deep Dive --Appling the Knowledge
 ----------------------------------------
 ---- prj-cmp-01-intro.mp4
 ---- prj-cmp-02-default-props.mp4
@@ -434,10 +433,20 @@ prj-cmp-03-form-in-component.zip
 prj-cmp-04-added-modal.zip
 prj-cmp-05-finished.zip
 ----------------------------------------
-Section 08 - Working with Bindings & Forms
+Section 08 - Working with Bindings & Forms --Handling User Input
 ----------------------------------------
 ---- bindings-01-intro.mp4
 ---- bindings-02-two-way-binding-refresher.mp4
+<script>
+    let val='Max';
+    $: console.log(val);
+    function setValue(event) { val = event.target.value; }
+</script>
+<!--<input type="text" value={val}   on:input={setValue}>-->
+    <input type="text" value={val} bind:value={val}>
+
+
+    
 ---- bindings-03-custom-component-bindings.mp4
 ---- bindings-04-automatic-number-conversion.mp4
 ---- bindings-05-checkboxes-and-radio-buttons.mp4
@@ -468,7 +477,7 @@ prj-form-03-more-input-validations.zip
 prj-form-04-full-form-validation.zip
 prj-form-05-textarea.zip
 ----------------------------------------
-Section 10 - Managing State & Data with Stores
+Section 10 - Managing State & Data with Stores - Storing and Sharing Data
 ----------------------------------------
 ---- stores-01-intro.mp4
 ---- stores-02-understanding-the-problem.mp4
@@ -512,7 +521,7 @@ prj-stores-05-deleting-meetups.zip
 prj-stores-06-added-filter.zip
 prj-stores-07-finished.zip
 ----------------------------------------
-Section 12 - Motion, Transitions & Animations
+Section 12 - Motion, Transitions & Animations --Providing Better UX
 ----------------------------------------
 ---- transitions-01-intro.mp4
 ---- transitions-02-tweened-store.mp4
@@ -543,7 +552,7 @@ prj-transitions-02-transition-list.zip
 prj-transitions-03-finished.zip
 ----------------------------------------
 ----------------------------------------
-Section 14 - Network Interaction via Http
+Section 14 - Network Interaction via Http - FEtching and Storing Data
 ----------------------------------------
 ---- http-01-intro.mp4
 API , json
@@ -596,7 +605,7 @@ prj-http-03-updating-meetups.zip
 prj-http-04-deleting-meetups.zip
 prj-http-05-finished.zip
 ----------------------------------------
-Section 16 - Special Elements
+Section 16 - Special Elements - Besides Custom Components
 ----------------------------------------
 ---- spec-elements-01-intro.mp4
 ---- spec-elements-02-dynamic-component.mp4
@@ -609,7 +618,7 @@ spec-elements-03-window-head-body.zip
 spec-elements-04-script-context-module.zip
 starting-project.zip
 ----------------------------------------
-Section 17 - Routing & Server-side Rendering with Sapper
+Section 17 - Routing & Server-side Rendering with Sapper --Beyong(Simple) Client-Only
 ----------------------------------------
 ---- sapper-01-intro.mp4
 Routing & Servere Side Rendering
@@ -690,7 +699,7 @@ sapper-05-adding-a-store.zip
 sapper-06-added-editing-and-deleting.zip
 sapper-07-finished.zip
 ----------------------------------------
-Section 18 - Deployment
+Section 18 - Deployment --From Dev to Prod
 ----------------------------------------
 ---- deployment-01-intro.mp4
 ---- deployment-02-app-types-and-deployment-options.mp4
@@ -708,7 +717,7 @@ on Amazon +S3
 ---- deployment-07-wrap-up.mp4
 deployment-01-finished.zip
 ----------------------------------------
-Section 19 - Course Roundup
+Section 19 - Course Roundup - Next Step
 ----------------------------------------
 course-roundup.mp4
 roundup-svelte-vs-alternatives.mp4
