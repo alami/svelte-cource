@@ -461,6 +461,22 @@ checkbox - массив !!!
     <select bind:value={singlefavcolor}>
     <option value="red">red</option>
 ---- bindings-07-binding-to-elements.mp4
+    let usernameInput;
+    function saveData() {
+        // console.log(document.querySelector('#username').value); //---vanilla JS
+        console.log(usernameInput.value);
+        console.log(usernameInput);//!full input
+        console.dir(usernameInput);//JS object
+    }
+        //$: console.log(usernameInput); // !!!!
+    <input type="text" bind:this={usernameInput}>  <!-- id="username" value="Max">-->
+    <button on:click="{saveData}">Save</button>
+=> вообще работать без HTML элементов
+    let someDiv;
+    console.dir(someDiv);
+    <div bind:this={someDiv}></div>
+
+
 ---- bindings-08-binding-to-component-references.mp4
 ---- bindings-09-validation.mp4
 ---- bindings-10-wrap-up.mp4
