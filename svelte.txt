@@ -457,6 +457,9 @@ radio будет 1 знгачение
     <input type="radio" name="color" value="blue" bind:group={favcolor}>Blu
 checkbox - массив !!!
 ---- bindings-06-binding-select-dropdowns.mp4
+аналогично будет 1 значение
+    <select bind:value={singlefavcolor}>
+    <option value="red">red</option>
 ---- bindings-07-binding-to-elements.mp4
 ---- bindings-08-binding-to-component-references.mp4
 ---- bindings-09-validation.mp4

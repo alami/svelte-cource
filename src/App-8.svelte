@@ -12,6 +12,8 @@
     $: console.log(agreed);
     let favcolor='blue';
     $: console.log(favcolor);
+    let  singlefavcolor='blue';
+    $: console.log(singlefavcolor);
 </script>
 <!--<input type="text" value={val}   on:input={setValue}>-->
 <!--<input type="text" value={val} bind:value={val}>-->
@@ -33,3 +35,13 @@ Agree to term?
     <input type="radio" name="color" value="green" bind:group={favcolor}>GREEN
     <input type="radio" name="color" value="blue" bind:group={favcolor}>Blu
 </label>
+<hr><!--6-binding-select-dropdowns-->
+<select bind:value={singlefavcolor}>
+    <option value="red">red</option>
+    <option value="green">green</option>
+    <option value="blue">blue</option>
+    <option value="yello">yellow</option>
+</select>
+
+
+
