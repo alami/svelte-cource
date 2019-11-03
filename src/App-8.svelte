@@ -35,7 +35,7 @@ Agree to term?
     <input type="radio" name="color" value="green" bind:group={favcolor}>GREEN
     <input type="radio" name="color" value="blue" bind:group={favcolor}>Blu
 </label>
-<hr><!--6-binding-select-dropdowns-->
+<hr> <!--6-binding-select-dropdowns-->
 <select bind:value={singlefavcolor}>
     <option value="red">red</option>
     <option value="green">green</option>
