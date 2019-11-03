@@ -399,12 +399,12 @@ custom-events-meetupDetails
 4-49 но какой meetup был нажат для togglefavorite - но каждый имеет id
 ---- prj-cmp-04-slots.mp4
 меняем цвет togglefavorite
-2-25 добавим баджек Badge.svelte для заголовка карточки - очень простой
+2-25 добавим баджек Badge.svelte в заголовка карточки - очень простой
 ---- prj-cmp-05-creating-an-edit-meetup-component.mp4
 вместо простой формы из App.svelte добавим EditMeetup.svelte
 1-57 не забудем preventDefault в
     <form on:submit|preventDefault={submitForm}>
-
+5-24 перместиь стиль формы из src/Meetups/MeetupGrid.svelte в src/Meetups/EditMeetup.svelte
 ---- prj-cmp-06-communicating-between-components.mp4
 ---- prj-cmp-07-more-slots.mp4
 ---- prj-cmp-08-adding-a-modal.mp4
