@@ -492,9 +492,26 @@ Section 09 - Course Project - Bindings & Forms
 ----------------------------------------
 ---- prj-bindings-01-intro.mp4
 ---- prj-bindings-02-different-validation-solutions.mp4
+можно вставить внутрь каждого ввода,
+2-13 но в statless компоненты не желательно
 ---- prj-bindings-03-adding-validation-output-to-textinput.mp4
+в src/UI/TextInput.svelte
+3-04 src/Meetups/EditMeetup.svelte
 ---- prj-bindings-04-adding-first-validation-logic.mp4
+создадим src/helpers/validation.js
+    export function isEmpty (val) {
+        return val.trim().length === 0; }
 ---- prj-bindings-05-finishing-textinput-validation.mp4
+добавим новый эвент on:blur  - чтобы ошибка пустого поля появлялась не сразу
+2-07
+3-04 regex email  --->
+https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+export function isValidEmail(val) {
+    return //val.includes('@');
+    new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?").test(val);
+}
+аналошгично для адреса итп
+
 ---- prj-bindings-06-overall-form-validation.mp4
 ---- prj-bindings-07-improvements-and-wrap-up.mp4
 prj-form-01-added-validation.zip
