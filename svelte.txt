@@ -476,9 +476,10 @@ checkbox - массив !!!
     console.dir(someDiv);
     <div bind:this={someDiv}></div>
 
-
 ---- bindings-08-binding-to-component-references.mp4
+работа с custom components
 ---- bindings-09-validation.mp4
+validation.js
 ---- bindings-10-wrap-up.mp4
 bind-form-01-custom-component-binding.zip
 bind-form-02-group-bindings.zip

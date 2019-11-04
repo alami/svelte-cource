@@ -26,6 +26,15 @@
         console.dir(someDiv);
     }
     //$: console.log(usernameInput); // !!!!full input
+// 8
+    let enteredEmail = '';//----иничиировать обязательно
+    let formIsValid =false;
+    $: if (enteredEmail.includes("@")) {
+        formIsValid = true;
+    } else {
+        formIsValid = false;
+    }
+
 
 </script>
 <!--<input type="text" value={val}   on:input={setValue}>-->
@@ -64,4 +73,10 @@ Agree to term?
 <button on:click="{saveData}">Save</button>
 
 <div bind:this={someDiv}></div>
+<hr><!--8-custom-component-binding-->
 
+<hr><!--9-custom-component-binding-->
+<form on:submit|preventDefault>
+    <input type="email" bind:value={enteredEmail}>
+    <button type="submit" disabled={!formIsValid}>Save</button>
+</form>
