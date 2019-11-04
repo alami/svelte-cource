@@ -524,8 +524,15 @@ Section 10 - Managing State & Data with Stores - Storing and Sharing Data
 ----------------------------------------
 ---- stores-01-intro.mp4
 ---- stores-02-understanding-the-problem.mp4
+на очень простой задаче о магазине : Card + Products
 ---- stores-03-creating-a-store-and-subscribing-to-it.mp4
+4-02 Стор - не просто массив, а стор на который можно подписться и он будет информировать об изменениях
 ---- stores-04-updating-store-data.mp4
+0-41 Product тоже подписывается на то же cart-store
+0-55 2 ф-ции: set() update()
+
+
+
 ---- stores-05-stores-and-stateful-and-presentational-components.mp4
 ---- stores-06-managing-store-subscriptions.mp4
 ---- stores-07-auto-subscriptions.mp4
