@@ -577,12 +577,11 @@ https://www.pvsm.ru/javascript/329860
 src/timer-store.js
 2-07 нельзя установить через set|update а тлько внутри передаваемой ф-ции,
 напр., таймер или navigation.geolocation.watchPosition()
-
-
-
----- stores-11-custom-stores.mp4
+---- stores-11-.mp4
+часть ф-ций removeFromCart() из src/Cart/CartItem.svelte
+и конечно addToCart()  из src/Products/Product.svelte
+логичнее ввести в стор файл =>custom-stores на основе writible
 ---- stores-12-wrap-up.mp4
-
 starting-project.zip
 stores-01-a-basic-writable-store.zip
 stores-02-subscribe-and-unsubscribe.zip
@@ -653,8 +652,6 @@ Firebase
 2-00 fetch() - ф-ция JS, а не Svelte
 3-31 https://svelte-course.firebaseio.com/hobbies.json - json требования Firebase, а не JS|Svelte
 для др.API это может и не  надо
-
-
 ---- http-04-showing-a-loading-indicator-and-sending-correct-data.mp4
 Loading...
 ---- http-05-fetching-and-transforming-data.mp4
