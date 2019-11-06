@@ -573,9 +573,13 @@ https://www.pvsm.ru/javascript/329860
 ---- stores-09-subscribing-for-a-short-period.mp4
 2-06 "Show Description" demo
 2-17 но опять проблема - пропущена отписка, в нам нужны все данные
-
-
 ---- stores-10-readable-stores.mp4
+src/timer-store.js
+2-07 нельзя установить через set|update а тлько внутри передаваемой ф-ции,
+напр., таймер или navigation.geolocation.watchPosition()
+
+
+
 ---- stores-11-custom-stores.mp4
 ---- stores-12-wrap-up.mp4
 
