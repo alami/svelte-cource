@@ -525,14 +525,30 @@ Section 10 - Managing State & Data with Stores - Storing and Sharing Data
 ---- stores-01-intro.mp4
 ---- stores-02-understanding-the-problem.mp4
 на очень простой задаче о магазине : Card + Products
+2.29 пока ничего не происходит: кнопками Products не добавляется к Card ()
+3-03 выводится список только Card
 ---- stores-03-creating-a-store-and-subscribing-to-it.mp4
-4-02 Стор - не просто массив, а стор на который можно подписться и он будет информировать об изменениях
+4-02 Стор - не просто массив, а стор на который можно
+подписаться() - и он будет информировать о данных
+установить/обновить() - для сохранения ввода/события
+1-49 создадим src/Cart/cart-store.js
+        import { writable } from 'svelte/store';
+        const cart = writable( например "text", или..[--для нашего случая
+          {    id: 'p3',    title: 'Test',    price: 9.99  }, --и копируем дефолтовые значения
+          {    id: 'p4',    title: 'Test',    price: 9.99  }   ]);
+        export default cart;
+(+)можем динамически добавить и др. объекты
 ---- stores-04-updating-store-data.mp4
+займемся Product
 0-41 Product тоже подписывается на то же cart-store
-0-55 2 ф-ции: set() update()
-
-
-
+  import cartItems from "../Cart/cart-store.js"; ---тот же самый Стор-р-р
+0-55 добывить к стору можено 2 ф-циями: set() update()
+1)    cartItems.set([]);--перезаписывает новыми данными
+1-24 - т.е.пустым массивом        ___вернуть_новые_данные_стора
+2-02 2)cartItems.update(items=>{ return [...items, {id:id,title:title,price:price} ] })
+          текущий_стор--^           копия--^       ^--новый элемент
+3-15 но не items.push() из-за мьютабельности
+4-00 поменяли нумерацию карт чтобы их id не пересекались с продуктами
 ---- stores-05-stores-and-stateful-and-presentational-components.mp4
 ---- stores-06-managing-store-subscriptions.mp4
 ---- stores-07-auto-subscriptions.mp4
