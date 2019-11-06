@@ -554,6 +554,12 @@ Section 10 - Managing State & Data with Stores - Storing and Sharing Data
 исп-ть св-ва и польз-ские события
 https://www.pvsm.ru/javascript/329860
 ---- stores-06-managing-store-subscriptions.mp4
+1-52 в чем причина ворнинга: подписка и отписка,
+2-22 т.е. надо освободить память при отключении "Tooggle Cart"
+2-41 подписка возвращает ф-цию отписки
+
+
+
 ---- stores-07-auto-subscriptions.mp4
 ---- stores-08-adding-another-store.mp4
 ---- stores-09-subscribing-for-a-short-period.mp4
