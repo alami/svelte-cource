@@ -1,4 +1,6 @@
 <script>
+  import cartItems from "./cart-store.js";
+  import {products} from "../Products/products-store";
   import Button from "../UI/Button.svelte";
 
   export let title;
@@ -6,14 +8,23 @@
   export let id;
 
   let showDescription = false;
+  let description = 'Not available!';
+  let fetchProducts = [];
+  products.subscribe(prods=>{
+    fetchProducts=prods;
+  });
 
   function displayDescription() {
     showDescription = !showDescription;
+    description = fetchProducts.find(p=>p.id===id).description;
   }
 
   function removeFromCart() {
     // ...
-    console.log("Removing...");
+    //console.log("Removing...");
+    cartItems.update(items=>{
+      return items.filter(i=>i.id!==id).description;
+    });
   }
 </script>
 
@@ -46,6 +57,6 @@
   </Button>
   <Button on:click={removeFromCart}>Remove from Cart</Button>
   {#if showDescription}
-    <p>Not available :(</p>
+    <p>{description}(</p>
   {/if}
 </li>

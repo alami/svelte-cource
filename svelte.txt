@@ -562,7 +562,19 @@ https://www.pvsm.ru/javascript/329860
 2-24 но если надо  чтото деалть со стором, преобразовать, вычислить, послать на сервер ит.п
 то как обычно без автоподписки
 ---- stores-08-adding-another-store.mp4
+давайте реализуем кн."удаления" -
+2-00 также через updete, найдя элемент чезе id
+4-00 это просто, а что по поводу description
+5-00 src/Products/products-store.js
+!! использовать import { writable } from 'svelte';
+         вместо import { writable } from 'svelte/store';
+  import {products} from "../Products/products-store";
+и в src/Cart/CartItem.svelte получить из стора по id
 ---- stores-09-subscribing-for-a-short-period.mp4
+2-06 "Show Description" demo
+2-17 но опять проблема - пропущена отписка, в нам нужны все данные
+
+
 ---- stores-10-readable-stores.mp4
 ---- stores-11-custom-stores.mp4
 ---- stores-12-wrap-up.mp4
