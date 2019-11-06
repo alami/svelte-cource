@@ -550,6 +550,9 @@ Section 10 - Managing State & Data with Stores - Storing and Sharing Data
 3-15 но не items.push() из-за мьютабельности
 4-00 поменяли нумерацию карт чтобы их id не пересекались с продуктами
 ---- stores-05-stores-and-stateful-and-presentational-components.mp4
+1-01 главное (+) сохранение данных вне компонента
+исп-ть св-ва и польз-ские события
+https://www.pvsm.ru/javascript/329860
 ---- stores-06-managing-store-subscriptions.mp4
 ---- stores-07-auto-subscriptions.mp4
 ---- stores-08-adding-another-store.mp4
