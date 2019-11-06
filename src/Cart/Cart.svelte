@@ -5,6 +5,7 @@
   let items;
 
   cartItems.subscribe(its => {
+    console.log(its);
     items = its;
   });
   //   export let items = [
